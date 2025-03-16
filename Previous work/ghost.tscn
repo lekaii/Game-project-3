@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck55jm50n8soc"]
+
+[ext_resource type="Script" uid="uid://bs047v2aalwg5" path="res://ghost.gd" id="1_v5pp4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tr3y"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_v5pp4"]
+polygon = PackedVector2Array(-8, 8, 8, 8, 8, -8, -8, -8)
+
+[node name="Ghost" type="CharacterBody2D"]
+script = ExtResource("1_v5pp4")
+speed = 40
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0tr3y")
+disabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_v5pp4")

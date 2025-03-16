@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4mheb7veolmm"]
+
+[ext_resource type="Texture2D" uid="uid://m448htoeiasi" path="res://icon.svg" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dl1p6tbcbnl72" path="res://Player.gd" id="1_onrkg"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_onrkg")
+movement_speed = null
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 10, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+texture = ExtResource("1_4flbx")
