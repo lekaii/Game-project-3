@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhd0a7olourbv"]
+[gd_scene load_steps=12 format=3 uid="uid://bhd0a7olourbv"]
 
 [ext_resource type="PackedScene" uid="uid://b4mheb7veolmm" path="res://player.tscn" id="2_jqgvv"]
 [ext_resource type="PackedScene" uid="uid://ccxlg6prusvwo" path="res://Free 3D Modular Game Assets For Prototyping/Pieces/door.fbx" id="3_ga1fi"]
@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://6crpla3gpec" path="res://Free 3D Modular Game Assets For Prototyping/Sample 3/Sample 3.fbx" id="5_7bgwg"]
 [ext_resource type="PackedScene" uid="uid://ber13no23304s" path="res://ghost.tscn" id="6_eacfm"]
 [ext_resource type="PackedScene" uid="uid://cg6r87uj1fr1q" path="res://drowned_man.tscn" id="7_asxeo"]
+[ext_resource type="AudioStream" uid="uid://b2i2ilasg1eq2" path="res://Audio/horror-ghost-test-final1.wav" id="7_e2pye"]
 [ext_resource type="PackedScene" uid="uid://sv4mn1xs3wsj" path="res://table.glb" id="8_0ih8o"]
+[ext_resource type="Script" uid="uid://bt1yehaseuyi7" path="res://Scripts/ghost_sound.gd" id="8_7j24p"]
 [ext_resource type="PackedScene" uid="uid://b6k0lspcg8whm" path="res://tree.glb" id="9_gkbv1"]
 
 [node name="Node3D" type="Node3D"]
@@ -45,9 +47,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54909, 0, 7.26662)
 
 [node name="Ghost" parent="." instance=ExtResource("6_eacfm")]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0.99831, 0, 8.56802)
+visible = false
 
 [node name="Ghost2" parent="." instance=ExtResource("6_eacfm")]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 2.65906, 9.53674e-07, 12.9244)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Ghost2" node_paths=PackedStringArray("player")]
+stream = ExtResource("7_e2pye")
+autoplay = true
+script = ExtResource("8_7j24p")
+player = NodePath("../../Player")
 
 [node name="Ghost3" parent="." instance=ExtResource("6_eacfm")]
 transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 1.59191, 0, 9.98833)
