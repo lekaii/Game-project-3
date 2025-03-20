@@ -17,9 +17,18 @@ movement_speed = 8.0
 transform = Transform3D(2, 0, 0, 0, 0.76556, 1.84768, 0, -1.84768, 0.76556, 0, 10, 4)
 current = true
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+[node name="RotatingPart" type="Marker3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="RotatingPart"]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
 texture = ExtResource("1_4flbx")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="RotatingPart"]
+transform = Transform3D(-2, 1.74846e-07, 1.8445e-14, -1.69349e-07, -1.93712, 0.497549, 4.34971e-08, 0.497549, 1.93712, 0, 1.364, 0)
+light_energy = 8.111
+shadow_enabled = true
+spot_range = 37.557
+spot_angle = 26.82
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.31428, 0)
@@ -27,7 +36,7 @@ light_energy = 2.293
 light_size = 0.546
 shadow_enabled = true
 shadow_blur = 0.202
-omni_range = 9.81508
+omni_range = 3.311
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.871343, 0)
@@ -35,3 +44,7 @@ shape = SubResource("CapsuleShape3D_onrkg")
 
 [node name="Character" parent="." instance=ExtResource("3_i3pqv")]
 visible = false
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, -8.74228e-08, 2, 0, -2, -8.74228e-08, 0, 5.92304, 0)
+light_energy = 0.25
