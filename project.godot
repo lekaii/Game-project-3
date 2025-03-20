@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Globals="*res://globals.gd"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/emils/OneDrive/Documents/in-sound-control-v2/video.avi"
+
 [input]
 
 move_up={
