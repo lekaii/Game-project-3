@@ -1,10 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjchv2lh22rm6"]
+[gd_scene load_steps=13 format=3 uid="uid://cjchv2lh22rm6"]
 
 [ext_resource type="MeshLibrary" uid="uid://cw7bnqf6jsdim" path="res://Assets/floor_gridmap.tres" id="1_evk5m"]
 [ext_resource type="MeshLibrary" uid="uid://b7hqef6gwj0fq" path="res://Assets/wall_gridmap.tres" id="2_h1tg3"]
 [ext_resource type="PackedScene" uid="uid://b4mheb7veolmm" path="res://player.tscn" id="3_h1tg3"]
+[ext_resource type="Script" uid="uid://ewyxgea8ctgi" path="res://Scripts/music_manager.gd" id="4_roj4x"]
+[ext_resource type="AudioStream" uid="uid://cg50hwakowne1" path="res://Audio/Horrorgame-lobbymusic-Final.wav" id="5_cpkpc"]
+[ext_resource type="AudioStream" uid="uid://b3u02heuxbxk6" path="res://Audio/bg-music.mp3" id="6_frt5s"]
+[ext_resource type="AudioStream" uid="uid://cx2c556rdqp5d" path="res://Audio/safetydance.mp3" id="7_fchbp"]
+
+[sub_resource type="Sky" id="Sky_h1tg3"]
+
+[sub_resource type="Environment" id="Environment_h1tg3"]
+sky = SubResource("Sky_h1tg3")
+ambient_light_source = 3
+ambient_light_sky_contribution = 0.39
+ambient_light_energy = 1.2
+reflected_light_source = 2
+tonemap_mode = 3
+ssr_enabled = true
+ssr_fade_in = 0.332871
+sdfgi_enabled = true
+adjustment_enabled = true
+adjustment_brightness = 0.75
+adjustment_contrast = 1.17
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_frt5s"]
+size = Vector3(1, 2.02722, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_roj4x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cpkpc"]
+size = Vector3(0.892578, 1.93359, 7.54407)
 
 [node name="Hotel" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_h1tg3")
 
 [node name="GridMapFloor" type="GridMap" parent="."]
 transform = Transform3D(-0.00165801, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.00165801, 3.60291, 0, 1.28792)
@@ -22,7 +53,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="Player" parent="." instance=ExtResource("3_h1tg3")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.91479, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.36566, 1.91479, 11.9237)
 
 [node name="GridMapWalls_V" type="GridMap" parent="."]
 transform = Transform3D(-0.999994, 0, 0.00338586, 0, 1, 0, -0.00338586, 0, -0.999994, -5.48197, 0, 5.27571)
@@ -30,3 +61,42 @@ mesh_library = ExtResource("2_h1tg3")
 data = {
 "cells": PackedInt32Array(65535, 3, 655381, 65535, 2, 655381, 65535, 1, 655376, 65535, 0, 655381, 65535, 65535, 655381, 65526, 3, 655376, 65526, 2, 655381, 65526, 1, 655379, 65526, 0, 655381, 65526, 65535, 655381, 2, 12, 21, 2, 11, 19, 2, 10, 21, 2, 9, 21, 2, 8, 15, 2, 7, 15, 2, 6, 21, 2, 5, 19, 2, 4, 21, 65523, 4, 655381, 65523, 5, 655379, 65523, 6, 655381, 65523, 7, 655375, 65523, 8, 655375, 65523, 9, 655381, 65523, 10, 655381, 65523, 11, 655379, 65523, 12, 655381, 65531, 11, 655381, 65531, 12, 655381, 65531, 10, 655381, 65531, 9, 655381, 65530, 9, 655381, 65530, 10, 655381, 65530, 11, 655381, 65530, 12, 655381, 65534, 6, 655381, 65534, 5, 655381, 65534, 4, 655381, 65528, 6, 655381, 65528, 5, 655381, 65528, 4, 655381, 65527, 6, 21, 65527, 5, 21, 65527, 4, 21, 65533, 6, 21, 65533, 5, 21, 65533, 4, 21, 65535, 12, 21, 65535, 11, 21, 65535, 10, 21, 65535, 9, 21, 65527, 11, 21, 65527, 12, 21, 65527, 10, 21, 65527, 9, 21, 65528, 16, 655381, 65528, 15, 655381, 65528, 14, 655381, 65528, 13, 655381, 65533, 16, 21, 65533, 15, 21, 65533, 14, 21, 65533, 13, 21)
 }
+metadata/_editor_floor_ = Vector3(0, -1, 0)
+
+[node name="MusicManager" type="Node" parent="."]
+script = ExtResource("4_roj4x")
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="MusicManager"]
+stream = ExtResource("5_cpkpc")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="MusicManager"]
+stream = ExtResource("6_frt5s")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="MusicManager"]
+stream = ExtResource("7_fchbp")
+volume_db = -5.621
+
+[node name="Area3" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39929, 0.85652, -25.6703)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3"]
+transform = Transform3D(9.52398, 0, 0, 0, 1, 0, 0, 0, 7.70138, 0.19556, 1.40935, 1.00902)
+shape = SubResource("BoxShape3D_frt5s")
+
+[node name="Area1" type="Area3D" parent="."]
+transform = Transform3D(9.08222, 0, 0, 0, 1, 0, 0, 0, 4.27223, 4.42844, 2.29819, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area1"]
+transform = Transform3D(1.90326, 0, 0, 0, 1.95925, 0, 0, 0, 2.28296, 0, 0, 0.554161)
+shape = SubResource("BoxShape3D_roj4x")
+
+[node name="Area2" type="Area3D" parent="."]
+transform = Transform3D(11.236, 0, 0, 0, 0.09, 0, 0, 0, 1, 1, 1, -12.4898)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area2"]
+transform = Transform3D(2.94719, 0, 0, 0, -18.1252, 2.03145e-07, 0, -1.58456e-06, -2.32371, 0.318111, 9.35727, 0.680762)
+shape = SubResource("BoxShape3D_cpkpc")
+
+[connection signal="body_entered" from="Area3" to="MusicManager" method="_on_area_3_body_entered"]
+[connection signal="body_entered" from="Area1" to="MusicManager" method="_on_area_1_body_entered"]
+[connection signal="body_entered" from="Area2" to="MusicManager" method="_on_area_2_body_entered"]

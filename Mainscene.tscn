@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhd0a7olourbv"]
+[gd_scene load_steps=13 format=3 uid="uid://bhd0a7olourbv"]
 
 [ext_resource type="PackedScene" uid="uid://b4mheb7veolmm" path="res://player.tscn" id="2_jqgvv"]
 [ext_resource type="PackedScene" uid="uid://ccxlg6prusvwo" path="res://Free 3D Modular Game Assets For Prototyping/Pieces/door.fbx" id="3_ga1fi"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://sv4mn1xs3wsj" path="res://table.glb" id="8_0ih8o"]
 [ext_resource type="Script" uid="uid://bt1yehaseuyi7" path="res://Scripts/ghost_sound.gd" id="8_7j24p"]
 [ext_resource type="PackedScene" uid="uid://b6k0lspcg8whm" path="res://tree.glb" id="9_gkbv1"]
+[ext_resource type="Script" uid="uid://bvhrmuj17etke" path="res://Scripts/scene_manager.gd" id="12_7j24p"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -79,3 +80,6 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -2.95499, 0.0310408, -0
 
 [node name="tree" parent="." instance=ExtResource("9_gkbv1")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -8.25135, -9.53674e-07, -1.63273)
+
+[node name="SceneManager" type="Node" parent="."]
+script = ExtResource("12_7j24p")
