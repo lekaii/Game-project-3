@@ -1,10 +1,12 @@
 extends CharacterBody3D
-@export var movement_speed : float = 500
+@export var movement_speed : float = 200
+@export var sprint_speed : float = 500
 var character_direction : Vector3
 
 @onready var camera = $Camera3D
 var rayOrigin = Vector3()
 var rayEnd = Vector3()
+var WASDdirection = 0
 
 func _physics_process(delta):
 	# Define the plane's Y-coordinate
@@ -35,10 +37,39 @@ func _physics_process(delta):
 	character_direction.x = Input.get_axis("move_left", "move_right")
 	character_direction.z = Input.get_axis("move_up", "move_down")
 	
-	if character_direction:
-		velocity = character_direction * movement_speed
+	print(character_direction.x)
+	
+	if character_direction.x:
+		WASDdirection = character_direction.x * 2 * 0.7854
+	
+	if character_direction.z:
+		WASDdirection = (character_direction.z - 1) * 2 * 0.7854
+		
+	if character_direction.x and character_direction.z:
+		if character_direction.x == 1: #right
+			if character_direction.z == 1: #up-right
+				WASDdirection = 1 * 0.7854
+			if character_direction.z == -1: #down-rigth
+				WASDdirection = 3 * 0.7854
+		if character_direction.x == -1: #left
+			if character_direction.z == 1: #up-left
+				WASDdirection = -1 * 0.7854
+			if character_direction.z == -1: #down-left
+				WASDdirection = -3 * 0.7854
+	
+	$WASDrotation.set_rotation(Vector3(0, WASDdirection, 0))
+	
+	var speed = 0
+	if Input.is_action_pressed("sprint"):
+		speed = sprint_speed
 	else:
-		velocity = velocity.move_toward(Vector3.ZERO, movement_speed)
+		speed = movement_speed
+	
+	
+	if character_direction:
+		velocity = character_direction * speed
+	else:
+		velocity = velocity.move_toward(Vector3.ZERO, speed)
 	
 	Globals.player_position = global_position
 	

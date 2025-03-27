@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4mheb7veolmm"]
+[gd_scene load_steps=6 format=3 uid="uid://b4mheb7veolmm"]
 
 [ext_resource type="Texture2D" uid="uid://m448htoeiasi" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://v0eh3b2hgwoo" path="res://Player.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://s07j2k8lfkbn" path="res://Player1.glb" id="3_hqtel"]
 [ext_resource type="PackedScene" uid="uid://k0fb4d0e6lps" path="res://Free 3D Modular Game Assets For Prototyping/Character/Character.fbx" id="3_i3pqv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
@@ -11,7 +12,8 @@ height = 3.31419
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0981694, 0)
 script = ExtResource("1_onrkg")
-movement_speed = 8.0
+movement_speed = 4.0
+sprint_speed = 8.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 0.76556, 1.84768, 0, -1.84768, 0.76556, 0, 10, 4)
@@ -24,14 +26,19 @@ transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.7
 texture = ExtResource("1_4flbx")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="RotatingPart"]
-transform = Transform3D(-2, 1.74846e-07, 1.8445e-14, -1.69349e-07, -1.93712, 0.497549, 4.34971e-08, 0.497549, 1.93712, 0, 1.364, 0)
+transform = Transform3D(-2, 1.74846e-07, -1.59191e-13, -1.69349e-07, -1.93712, 0.49755, 4.34971e-08, 0.49755, 1.93712, 0, 1.364, -0.499763)
 light_energy = 8.111
 shadow_enabled = true
 spot_range = 37.557
 spot_angle = 26.82
 
+[node name="WASDrotation" type="Marker3D" parent="."]
+
+[node name="Player1" parent="WASDrotation" instance=ExtResource("3_hqtel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.963881, -0.256382)
+
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.31428, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2.33844, 0)
 light_energy = 2.293
 light_size = 0.546
 shadow_enabled = true
