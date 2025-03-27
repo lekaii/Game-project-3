@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://dc706iss8cjje"]
+
+[ext_resource type="PackedScene" uid="uid://c3yuqkbph25nn" path="res://Assets/kensey-building/floor-corner-diagonal.glb" id="1_dxqrv"]
+[ext_resource type="PackedScene" uid="uid://dhuyvh2o0ab1l" path="res://Assets/kensey-building/floor-corner-round.glb" id="2_7xt5q"]
+[ext_resource type="PackedScene" uid="uid://b8clnba0x0g5n" path="res://Assets/kensey-building/floor-half.glb" id="3_3705n"]
+[ext_resource type="PackedScene" uid="uid://cv5xd274kuhdh" path="res://Assets/kensey-building/floor-quarter.glb" id="4_063yc"]
+[ext_resource type="PackedScene" uid="uid://bh2iuptmiadho" path="res://Assets/kensey-building/floor.glb" id="5_kaq3f"]
+
+[node name="Gridmapfloor" type="Node3D"]
+
+[node name="floor-corner-diagonal2" parent="." instance=ExtResource("1_dxqrv")]
+
+[node name="floor-corner-round2" parent="." instance=ExtResource("2_7xt5q")]
+
+[node name="floor-half2" parent="." instance=ExtResource("3_3705n")]
+
+[node name="floor-quarter2" parent="." instance=ExtResource("4_063yc")]
+
+[node name="floor2" parent="." instance=ExtResource("5_kaq3f")]

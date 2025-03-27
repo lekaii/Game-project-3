@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="In Sound Control v2"
-run/main_scene="res://Mainscene.tscn"
+run/main_scene="uid://cjchv2lh22rm6"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,241 +1,244 @@
-[gd_scene load_steps=80 format=3 uid="uid://gq6ce1hrgoxl"]
+[gd_scene load_steps=81 format=3 uid="uid://gq6ce1hrgoxl"]
 
-[ext_resource type="PackedScene" uid="uid://bsglr1ll5pixu" path="res://Assets/kensey-building/barricade-doorway-a.glb" id="1_2qavb"]
-[ext_resource type="PackedScene" uid="uid://ch67irnilmh04" path="res://Assets/kensey-building/barricade-doorway-b.glb" id="2_fhfn5"]
-[ext_resource type="PackedScene" uid="uid://dkdmh0uxy26bb" path="res://Assets/kensey-building/barricade-doorway-c.glb" id="3_uegs7"]
-[ext_resource type="PackedScene" uid="uid://dtfybge7356bq" path="res://Assets/kensey-building/barricade-window-a.glb" id="4_ud6a8"]
-[ext_resource type="PackedScene" uid="uid://pun3q3rrnbpi" path="res://Assets/kensey-building/barricade-window-b.glb" id="5_k1ak1"]
-[ext_resource type="PackedScene" uid="uid://dj2074ib26m8d" path="res://Assets/kensey-building/barricade-window-c.glb" id="6_rll34"]
-[ext_resource type="PackedScene" uid="uid://cmbxh8foix1rs" path="res://Assets/kensey-building/border-corner-diagonal.glb" id="7_d1jw4"]
-[ext_resource type="PackedScene" uid="uid://2jr7834e8w74" path="res://Assets/kensey-building/border-corner-round.glb" id="8_dmc0i"]
-[ext_resource type="PackedScene" uid="uid://c6sao2v1d1whb" path="res://Assets/kensey-building/border-corner-small.glb" id="9_vw6oi"]
-[ext_resource type="PackedScene" uid="uid://bejo32ogsj5d6" path="res://Assets/kensey-building/border-corner.glb" id="10_tekic"]
-[ext_resource type="PackedScene" uid="uid://c888fxtrsb7mx" path="res://Assets/kensey-building/border-high-corner-diagonal.glb" id="11_2luou"]
-[ext_resource type="PackedScene" uid="uid://py2rnek6yg4u" path="res://Assets/kensey-building/border-high-corner-round.glb" id="12_ik3iw"]
-[ext_resource type="PackedScene" uid="uid://cwhll0c05128l" path="res://Assets/kensey-building/border-high-corner-small.glb" id="13_mmpug"]
-[ext_resource type="PackedScene" uid="uid://bk753x7dkojqs" path="res://Assets/kensey-building/border-high-corner.glb" id="14_7s7uw"]
-[ext_resource type="PackedScene" uid="uid://cly4o38atj7aj" path="res://Assets/kensey-building/border-high.glb" id="15_g05g1"]
-[ext_resource type="PackedScene" uid="uid://bhod1tgqpng1f" path="res://Assets/kensey-building/border.glb" id="16_smf7h"]
-[ext_resource type="PackedScene" uid="uid://3rv330jg3ue3" path="res://Assets/kensey-building/column-thin.glb" id="17_ni7hu"]
-[ext_resource type="PackedScene" uid="uid://cbmi6rusj5pdq" path="res://Assets/kensey-building/column-wide.glb" id="18_m7qoc"]
-[ext_resource type="PackedScene" uid="uid://dmovb4rcxa1j8" path="res://Assets/kensey-building/column.glb" id="19_jfhmi"]
-[ext_resource type="PackedScene" uid="uid://c7bobq5dpskxo" path="res://Assets/kensey-building/detail-pipe.glb" id="20_1p05m"]
-[ext_resource type="PackedScene" uid="uid://ca8ykbpqxmc8v" path="res://Assets/kensey-building/door-rotate-round-a.glb" id="21_21e24"]
-[ext_resource type="PackedScene" uid="uid://wywua7hdryc1" path="res://Assets/kensey-building/door-rotate-round-b.glb" id="22_nsbqr"]
-[ext_resource type="PackedScene" uid="uid://dm631vcps6lv3" path="res://Assets/kensey-building/door-rotate-round-c.glb" id="23_hh2wv"]
-[ext_resource type="PackedScene" uid="uid://bnj25jc1hjl0s" path="res://Assets/kensey-building/door-rotate-round-d.glb" id="24_o6pe0"]
-[ext_resource type="PackedScene" uid="uid://ct4d6iu8g0v6x" path="res://Assets/kensey-building/door-rotate-square-a.glb" id="25_jnk7v"]
-[ext_resource type="PackedScene" uid="uid://dj3r28fj62p5q" path="res://Assets/kensey-building/door-rotate-square-b.glb" id="26_j4jjj"]
-[ext_resource type="PackedScene" uid="uid://cvjg5lu24l7ru" path="res://Assets/kensey-building/door-rotate-square-c.glb" id="27_u67ut"]
-[ext_resource type="PackedScene" uid="uid://c7w4tdrb0hh0i" path="res://Assets/kensey-building/door-rotate-square-d.glb" id="28_gtspc"]
-[ext_resource type="PackedScene" uid="uid://c3yuqkbph25nn" path="res://Assets/kensey-building/floor-corner-diagonal.glb" id="29_2oa6p"]
-[ext_resource type="PackedScene" uid="uid://dhuyvh2o0ab1l" path="res://Assets/kensey-building/floor-corner-round.glb" id="30_fysob"]
-[ext_resource type="PackedScene" uid="uid://b8clnba0x0g5n" path="res://Assets/kensey-building/floor-half.glb" id="31_00052"]
-[ext_resource type="PackedScene" uid="uid://cv5xd274kuhdh" path="res://Assets/kensey-building/floor-quarter.glb" id="32_fgrxc"]
-[ext_resource type="PackedScene" uid="uid://bh2iuptmiadho" path="res://Assets/kensey-building/floor.glb" id="33_csct8"]
-[ext_resource type="PackedScene" uid="uid://dr7yr21j08ax5" path="res://Assets/kensey-building/gutter-vertical-bottom.glb" id="34_bejwl"]
-[ext_resource type="PackedScene" uid="uid://u1gxho2sa2nc" path="res://Assets/kensey-building/gutter-vertical-short.glb" id="35_rk8ox"]
-[ext_resource type="PackedScene" uid="uid://djpckdhwngdx3" path="res://Assets/kensey-building/gutter-vertical-top.glb" id="36_bp6s8"]
-[ext_resource type="PackedScene" uid="uid://b3ni0y1rlcpeb" path="res://Assets/kensey-building/gutter-vertical-wall.glb" id="37_fbljx"]
-[ext_resource type="PackedScene" uid="uid://b6ucs0wtpqs7g" path="res://Assets/kensey-building/gutter-vertical.glb" id="38_qybcq"]
-[ext_resource type="PackedScene" uid="uid://72p1pvolc58h" path="res://Assets/kensey-building/plating-detailed-wide.glb" id="39_ljcjh"]
-[ext_resource type="PackedScene" uid="uid://ce73m2bw4eeij" path="res://Assets/kensey-building/plating-detailed.glb" id="40_lxcuy"]
-[ext_resource type="PackedScene" uid="uid://r3griaswvwfd" path="res://Assets/kensey-building/plating-wide.glb" id="41_2u1y0"]
-[ext_resource type="PackedScene" uid="uid://cr1hie07r3keg" path="res://Assets/kensey-building/plating.glb" id="42_xpwdh"]
-[ext_resource type="PackedScene" uid="uid://bsu83gkvumk4h" path="res://Assets/kensey-building/roof-flat-center.glb" id="43_34ciy"]
-[ext_resource type="PackedScene" uid="uid://cetvcxwhefan2" path="res://Assets/kensey-building/roof-flat-corner-inner.glb" id="44_cvo44"]
-[ext_resource type="PackedScene" uid="uid://bqpkbap36cd75" path="res://Assets/kensey-building/roof-flat-corner.glb" id="45_tvinr"]
-[ext_resource type="PackedScene" uid="uid://be522gy34g7gm" path="res://Assets/kensey-building/roof-flat-patch-large.glb" id="46_apjfu"]
-[ext_resource type="PackedScene" uid="uid://b3nf5fiipfriq" path="res://Assets/kensey-building/roof-flat-patch.glb" id="47_4v1br"]
-[ext_resource type="PackedScene" uid="uid://dy82kq4mpnwfn" path="res://Assets/kensey-building/roof-flat-side.glb" id="48_vitsi"]
-[ext_resource type="PackedScene" uid="uid://bmmiwmxhrqv76" path="res://Assets/kensey-building/roof-flat-square.glb" id="49_g70k4"]
-[ext_resource type="PackedScene" uid="uid://ckbilndnofma3" path="res://Assets/kensey-building/stairs-center-short.glb" id="50_r3fgj"]
-[ext_resource type="PackedScene" uid="uid://cxuhutc3da3m6" path="res://Assets/kensey-building/stairs-center.glb" id="51_milkf"]
-[ext_resource type="PackedScene" uid="uid://imamqewxar4n" path="res://Assets/kensey-building/stairs-closed-short.glb" id="52_3fl7k"]
-[ext_resource type="PackedScene" uid="uid://b62b3fm3vjphi" path="res://Assets/kensey-building/stairs-closed.glb" id="53_6i3oj"]
-[ext_resource type="PackedScene" uid="uid://djithocig6vwv" path="res://Assets/kensey-building/stairs-open-short.glb" id="54_uwth8"]
-[ext_resource type="PackedScene" uid="uid://b6o12ne7r3x4b" path="res://Assets/kensey-building/stairs-open.glb" id="55_v4cow"]
-[ext_resource type="PackedScene" uid="uid://dmqljor1tmbwn" path="res://Assets/kensey-building/stairs-sides-short.glb" id="56_vr86o"]
-[ext_resource type="PackedScene" uid="uid://c7kqn0c1wi1k1" path="res://Assets/kensey-building/stairs-sides.glb" id="57_vck64"]
-[ext_resource type="PackedScene" uid="uid://c5fyhgkerqmmy" path="res://Assets/kensey-building/wall-corner-column-bottom.glb" id="58_fisf2"]
-[ext_resource type="PackedScene" uid="uid://bsvao4qcbw50r" path="res://Assets/kensey-building/wall-corner-column-small-bottom.glb" id="59_qu2r8"]
-[ext_resource type="PackedScene" uid="uid://bhw0gt1e60ic7" path="res://Assets/kensey-building/wall-corner-column-small.glb" id="60_43cdu"]
-[ext_resource type="PackedScene" uid="uid://cnbjceilb1neu" path="res://Assets/kensey-building/wall-corner-column.glb" id="61_ejrjp"]
-[ext_resource type="PackedScene" uid="uid://dtpd8wtigy15r" path="res://Assets/kensey-building/wall-corner-diagonal.glb" id="62_7fjgo"]
-[ext_resource type="PackedScene" uid="uid://vxe11c3b7oen" path="res://Assets/kensey-building/wall-corner-round.glb" id="63_d1dw4"]
-[ext_resource type="PackedScene" uid="uid://dd7a0cpwggwhn" path="res://Assets/kensey-building/wall-corner.glb" id="64_caitl"]
-[ext_resource type="PackedScene" uid="uid://c5lvn2ukhe88v" path="res://Assets/kensey-building/wall-doorway-round.glb" id="65_1of8q"]
-[ext_resource type="PackedScene" uid="uid://cve812akk7r36" path="res://Assets/kensey-building/wall-doorway-square.glb" id="66_joy02"]
-[ext_resource type="PackedScene" uid="uid://b336v0vcmnnv5" path="res://Assets/kensey-building/wall-doorway-wide-round.glb" id="67_0w6tu"]
-[ext_resource type="PackedScene" uid="uid://dteuxp8mopse" path="res://Assets/kensey-building/wall-doorway-wide-square.glb" id="68_c87uj"]
-[ext_resource type="PackedScene" uid="uid://bc18rrmu6ljtk" path="res://Assets/kensey-building/wall-half.glb" id="69_sq2ug"]
-[ext_resource type="PackedScene" uid="uid://c2l2x8j0upy6l" path="res://Assets/kensey-building/wall-low.glb" id="70_eeup1"]
-[ext_resource type="PackedScene" uid="uid://q1ppgw2qsgg3" path="res://Assets/kensey-building/wall-window-round-detailed.glb" id="71_flr6o"]
-[ext_resource type="PackedScene" uid="uid://lnlml1uc5e3g" path="res://Assets/kensey-building/wall-window-round.glb" id="72_t5c03"]
-[ext_resource type="PackedScene" uid="uid://da7ymxibpmx6x" path="res://Assets/kensey-building/wall-window-square-detailed.glb" id="73_sb3ek"]
-[ext_resource type="PackedScene" uid="uid://bea2ua2bc1mlg" path="res://Assets/kensey-building/wall-window-square.glb" id="74_net0s"]
-[ext_resource type="PackedScene" uid="uid://dx46fq72jeae3" path="res://Assets/kensey-building/wall-window-wide-round-detailed.glb" id="75_rjvke"]
-[ext_resource type="PackedScene" uid="uid://7cd1gmkp6v30" path="res://Assets/kensey-building/wall-window-wide-round.glb" id="76_im0o3"]
-[ext_resource type="PackedScene" uid="uid://4usj1iu6n6ai" path="res://Assets/kensey-building/wall-window-wide-square-detailed.glb" id="77_bom3l"]
-[ext_resource type="PackedScene" uid="uid://bsngvsjklcxx0" path="res://Assets/kensey-building/wall-window-wide-square.glb" id="78_ubg3a"]
-[ext_resource type="PackedScene" uid="uid://dq4nkuwkitdke" path="res://Assets/kensey-building/wall.glb" id="79_ysf6h"]
+[ext_resource type="PackedScene" uid="uid://bsglr1ll5pixu" path="res://Assets/kensey-building/barricade-doorway-a.glb" id="1_a7rba"]
+[ext_resource type="PackedScene" uid="uid://ch67irnilmh04" path="res://Assets/kensey-building/barricade-doorway-b.glb" id="2_8742j"]
+[ext_resource type="PackedScene" uid="uid://dkdmh0uxy26bb" path="res://Assets/kensey-building/barricade-doorway-c.glb" id="3_tioaf"]
+[ext_resource type="PackedScene" uid="uid://dtfybge7356bq" path="res://Assets/kensey-building/barricade-window-a.glb" id="4_ll6iq"]
+[ext_resource type="PackedScene" uid="uid://pun3q3rrnbpi" path="res://Assets/kensey-building/barricade-window-b.glb" id="5_ogyel"]
+[ext_resource type="PackedScene" uid="uid://dj2074ib26m8d" path="res://Assets/kensey-building/barricade-window-c.glb" id="6_xbeq3"]
+[ext_resource type="PackedScene" uid="uid://cmbxh8foix1rs" path="res://Assets/kensey-building/border-corner-diagonal.glb" id="7_wdvyx"]
+[ext_resource type="PackedScene" uid="uid://2jr7834e8w74" path="res://Assets/kensey-building/border-corner-round.glb" id="8_uf13f"]
+[ext_resource type="PackedScene" uid="uid://c6sao2v1d1whb" path="res://Assets/kensey-building/border-corner-small.glb" id="9_vn5h8"]
+[ext_resource type="PackedScene" uid="uid://bejo32ogsj5d6" path="res://Assets/kensey-building/border-corner.glb" id="10_l7n8d"]
+[ext_resource type="PackedScene" uid="uid://c888fxtrsb7mx" path="res://Assets/kensey-building/border-high-corner-diagonal.glb" id="11_lqt67"]
+[ext_resource type="PackedScene" uid="uid://py2rnek6yg4u" path="res://Assets/kensey-building/border-high-corner-round.glb" id="12_bxebb"]
+[ext_resource type="PackedScene" uid="uid://cwhll0c05128l" path="res://Assets/kensey-building/border-high-corner-small.glb" id="13_ybucc"]
+[ext_resource type="PackedScene" uid="uid://bk753x7dkojqs" path="res://Assets/kensey-building/border-high-corner.glb" id="14_j3pe5"]
+[ext_resource type="PackedScene" uid="uid://cly4o38atj7aj" path="res://Assets/kensey-building/border-high.glb" id="15_nvrx8"]
+[ext_resource type="PackedScene" uid="uid://bhod1tgqpng1f" path="res://Assets/kensey-building/border.glb" id="16_1fm6n"]
+[ext_resource type="PackedScene" uid="uid://3rv330jg3ue3" path="res://Assets/kensey-building/column-thin.glb" id="17_j1qfq"]
+[ext_resource type="PackedScene" uid="uid://cbmi6rusj5pdq" path="res://Assets/kensey-building/column-wide.glb" id="18_cympb"]
+[ext_resource type="PackedScene" uid="uid://dmovb4rcxa1j8" path="res://Assets/kensey-building/column.glb" id="19_tieoq"]
+[ext_resource type="PackedScene" uid="uid://c7bobq5dpskxo" path="res://Assets/kensey-building/detail-pipe.glb" id="20_ymmiv"]
+[ext_resource type="PackedScene" uid="uid://ca8ykbpqxmc8v" path="res://Assets/kensey-building/door-rotate-round-a.glb" id="21_fnivq"]
+[ext_resource type="PackedScene" uid="uid://wywua7hdryc1" path="res://Assets/kensey-building/door-rotate-round-b.glb" id="22_b26rp"]
+[ext_resource type="PackedScene" uid="uid://dm631vcps6lv3" path="res://Assets/kensey-building/door-rotate-round-c.glb" id="23_2crne"]
+[ext_resource type="PackedScene" uid="uid://bnj25jc1hjl0s" path="res://Assets/kensey-building/door-rotate-round-d.glb" id="24_j7ifr"]
+[ext_resource type="PackedScene" uid="uid://ct4d6iu8g0v6x" path="res://Assets/kensey-building/door-rotate-square-a.glb" id="25_ty460"]
+[ext_resource type="PackedScene" uid="uid://dj3r28fj62p5q" path="res://Assets/kensey-building/door-rotate-square-b.glb" id="26_rjhcf"]
+[ext_resource type="PackedScene" uid="uid://cvjg5lu24l7ru" path="res://Assets/kensey-building/door-rotate-square-c.glb" id="27_thus1"]
+[ext_resource type="PackedScene" uid="uid://c7w4tdrb0hh0i" path="res://Assets/kensey-building/door-rotate-square-d.glb" id="28_frdyb"]
+[ext_resource type="PackedScene" uid="uid://c3yuqkbph25nn" path="res://Assets/kensey-building/floor-corner-diagonal.glb" id="29_cpgp7"]
+[ext_resource type="PackedScene" uid="uid://dhuyvh2o0ab1l" path="res://Assets/kensey-building/floor-corner-round.glb" id="30_cdppg"]
+[ext_resource type="PackedScene" uid="uid://b8clnba0x0g5n" path="res://Assets/kensey-building/floor-half.glb" id="31_gxaox"]
+[ext_resource type="PackedScene" uid="uid://cv5xd274kuhdh" path="res://Assets/kensey-building/floor-quarter.glb" id="32_3tcj2"]
+[ext_resource type="PackedScene" uid="uid://bh2iuptmiadho" path="res://Assets/kensey-building/floor.glb" id="33_xru5t"]
+[ext_resource type="PackedScene" uid="uid://dr7yr21j08ax5" path="res://Assets/kensey-building/gutter-vertical-bottom.glb" id="34_vsy37"]
+[ext_resource type="PackedScene" uid="uid://u1gxho2sa2nc" path="res://Assets/kensey-building/gutter-vertical-short.glb" id="35_l4y78"]
+[ext_resource type="PackedScene" uid="uid://djpckdhwngdx3" path="res://Assets/kensey-building/gutter-vertical-top.glb" id="36_gp3rp"]
+[ext_resource type="PackedScene" uid="uid://b3ni0y1rlcpeb" path="res://Assets/kensey-building/gutter-vertical-wall.glb" id="37_tyi5c"]
+[ext_resource type="PackedScene" uid="uid://b6ucs0wtpqs7g" path="res://Assets/kensey-building/gutter-vertical.glb" id="38_a00kg"]
+[ext_resource type="PackedScene" uid="uid://72p1pvolc58h" path="res://Assets/kensey-building/plating-detailed-wide.glb" id="39_c246e"]
+[ext_resource type="PackedScene" uid="uid://ce73m2bw4eeij" path="res://Assets/kensey-building/plating-detailed.glb" id="40_8n31s"]
+[ext_resource type="PackedScene" uid="uid://r3griaswvwfd" path="res://Assets/kensey-building/plating-wide.glb" id="41_1jp7e"]
+[ext_resource type="PackedScene" uid="uid://cr1hie07r3keg" path="res://Assets/kensey-building/plating.glb" id="42_rc823"]
+[ext_resource type="PackedScene" uid="uid://bsu83gkvumk4h" path="res://Assets/kensey-building/roof-flat-center.glb" id="43_tti5g"]
+[ext_resource type="PackedScene" uid="uid://cetvcxwhefan2" path="res://Assets/kensey-building/roof-flat-corner-inner.glb" id="44_dknf1"]
+[ext_resource type="PackedScene" uid="uid://bqpkbap36cd75" path="res://Assets/kensey-building/roof-flat-corner.glb" id="45_mqiai"]
+[ext_resource type="PackedScene" uid="uid://be522gy34g7gm" path="res://Assets/kensey-building/roof-flat-patch-large.glb" id="46_8ghpt"]
+[ext_resource type="PackedScene" uid="uid://b3nf5fiipfriq" path="res://Assets/kensey-building/roof-flat-patch.glb" id="47_7q1qf"]
+[ext_resource type="PackedScene" uid="uid://dy82kq4mpnwfn" path="res://Assets/kensey-building/roof-flat-side.glb" id="48_762jb"]
+[ext_resource type="PackedScene" uid="uid://bmmiwmxhrqv76" path="res://Assets/kensey-building/roof-flat-square.glb" id="49_4u8ht"]
+[ext_resource type="PackedScene" uid="uid://ckbilndnofma3" path="res://Assets/kensey-building/stairs-center-short.glb" id="50_oe5al"]
+[ext_resource type="PackedScene" uid="uid://cxuhutc3da3m6" path="res://Assets/kensey-building/stairs-center.glb" id="51_yeulv"]
+[ext_resource type="PackedScene" uid="uid://imamqewxar4n" path="res://Assets/kensey-building/stairs-closed-short.glb" id="52_2grht"]
+[ext_resource type="PackedScene" uid="uid://b62b3fm3vjphi" path="res://Assets/kensey-building/stairs-closed.glb" id="53_0ggbv"]
+[ext_resource type="PackedScene" uid="uid://djithocig6vwv" path="res://Assets/kensey-building/stairs-open-short.glb" id="54_wi448"]
+[ext_resource type="PackedScene" uid="uid://b6o12ne7r3x4b" path="res://Assets/kensey-building/stairs-open.glb" id="55_1q7j6"]
+[ext_resource type="PackedScene" uid="uid://dmqljor1tmbwn" path="res://Assets/kensey-building/stairs-sides-short.glb" id="56_qn1xi"]
+[ext_resource type="PackedScene" uid="uid://c7kqn0c1wi1k1" path="res://Assets/kensey-building/stairs-sides.glb" id="57_rfr57"]
+[ext_resource type="PackedScene" uid="uid://c5fyhgkerqmmy" path="res://Assets/kensey-building/wall-corner-column-bottom.glb" id="58_cpb1r"]
+[ext_resource type="PackedScene" uid="uid://bsvao4qcbw50r" path="res://Assets/kensey-building/wall-corner-column-small-bottom.glb" id="59_ojmun"]
+[ext_resource type="PackedScene" uid="uid://bhw0gt1e60ic7" path="res://Assets/kensey-building/wall-corner-column-small.glb" id="60_ps5nu"]
+[ext_resource type="PackedScene" uid="uid://cnbjceilb1neu" path="res://Assets/kensey-building/wall-corner-column.glb" id="61_qxifi"]
+[ext_resource type="PackedScene" uid="uid://dtpd8wtigy15r" path="res://Assets/kensey-building/wall-corner-diagonal.glb" id="62_w3rjh"]
+[ext_resource type="PackedScene" uid="uid://vxe11c3b7oen" path="res://Assets/kensey-building/wall-corner-round.glb" id="63_vja5r"]
+[ext_resource type="PackedScene" uid="uid://dd7a0cpwggwhn" path="res://Assets/kensey-building/wall-corner.glb" id="64_map05"]
+[ext_resource type="PackedScene" uid="uid://c5lvn2ukhe88v" path="res://Assets/kensey-building/wall-doorway-round.glb" id="65_fr4ki"]
+[ext_resource type="PackedScene" uid="uid://cve812akk7r36" path="res://Assets/kensey-building/wall-doorway-square.glb" id="66_xx8vq"]
+[ext_resource type="PackedScene" uid="uid://b336v0vcmnnv5" path="res://Assets/kensey-building/wall-doorway-wide-round.glb" id="67_5gp7b"]
+[ext_resource type="PackedScene" uid="uid://dteuxp8mopse" path="res://Assets/kensey-building/wall-doorway-wide-square.glb" id="68_jotae"]
+[ext_resource type="PackedScene" uid="uid://bc18rrmu6ljtk" path="res://Assets/kensey-building/wall-half.glb" id="69_litpk"]
+[ext_resource type="PackedScene" uid="uid://c2l2x8j0upy6l" path="res://Assets/kensey-building/wall-low.glb" id="70_llm0j"]
+[ext_resource type="PackedScene" uid="uid://q1ppgw2qsgg3" path="res://Assets/kensey-building/wall-window-round-detailed.glb" id="71_d6qim"]
+[ext_resource type="PackedScene" uid="uid://lnlml1uc5e3g" path="res://Assets/kensey-building/wall-window-round.glb" id="72_71h3r"]
+[ext_resource type="PackedScene" uid="uid://da7ymxibpmx6x" path="res://Assets/kensey-building/wall-window-square-detailed.glb" id="73_uwja7"]
+[ext_resource type="PackedScene" uid="uid://bea2ua2bc1mlg" path="res://Assets/kensey-building/wall-window-square.glb" id="74_xuq2o"]
+[ext_resource type="PackedScene" uid="uid://dx46fq72jeae3" path="res://Assets/kensey-building/wall-window-wide-round-detailed.glb" id="75_ffyhn"]
+[ext_resource type="PackedScene" uid="uid://7cd1gmkp6v30" path="res://Assets/kensey-building/wall-window-wide-round.glb" id="76_k0k6a"]
+[ext_resource type="PackedScene" uid="uid://4usj1iu6n6ai" path="res://Assets/kensey-building/wall-window-wide-square-detailed.glb" id="77_e6o01"]
+[ext_resource type="PackedScene" uid="uid://bsngvsjklcxx0" path="res://Assets/kensey-building/wall-window-wide-square.glb" id="78_1ahs5"]
+[ext_resource type="PackedScene" uid="uid://dq4nkuwkitdke" path="res://Assets/kensey-building/wall.glb" id="79_jfih2"]
+[ext_resource type="PackedScene" uid="uid://b6k0lspcg8whm" path="res://tree.glb" id="80_c6sw2"]
 
 [node name="GridMapBuilding" type="Node3D"]
 
-[node name="barricade-doorway-a2" parent="." instance=ExtResource("1_2qavb")]
+[node name="barricade-doorway-a2" parent="." instance=ExtResource("1_a7rba")]
 
-[node name="barricade-doorway-b2" parent="." instance=ExtResource("2_fhfn5")]
+[node name="barricade-doorway-b2" parent="." instance=ExtResource("2_8742j")]
 
-[node name="barricade-doorway-c2" parent="." instance=ExtResource("3_uegs7")]
+[node name="barricade-doorway-c2" parent="." instance=ExtResource("3_tioaf")]
 
-[node name="barricade-window-a2" parent="." instance=ExtResource("4_ud6a8")]
+[node name="barricade-window-a2" parent="." instance=ExtResource("4_ll6iq")]
 
-[node name="barricade-window-b2" parent="." instance=ExtResource("5_k1ak1")]
+[node name="barricade-window-b2" parent="." instance=ExtResource("5_ogyel")]
 
-[node name="barricade-window-c2" parent="." instance=ExtResource("6_rll34")]
+[node name="barricade-window-c2" parent="." instance=ExtResource("6_xbeq3")]
 
-[node name="border-corner-diagonal2" parent="." instance=ExtResource("7_d1jw4")]
+[node name="border-corner-diagonal2" parent="." instance=ExtResource("7_wdvyx")]
 
-[node name="border-corner-round2" parent="." instance=ExtResource("8_dmc0i")]
+[node name="border-corner-round2" parent="." instance=ExtResource("8_uf13f")]
 
-[node name="border-corner-small2" parent="." instance=ExtResource("9_vw6oi")]
+[node name="border-corner-small2" parent="." instance=ExtResource("9_vn5h8")]
 
-[node name="border-corner2" parent="." instance=ExtResource("10_tekic")]
+[node name="border-corner2" parent="." instance=ExtResource("10_l7n8d")]
 
-[node name="border-high-corner-diagonal2" parent="." instance=ExtResource("11_2luou")]
+[node name="border-high-corner-diagonal2" parent="." instance=ExtResource("11_lqt67")]
 
-[node name="border-high-corner-round2" parent="." instance=ExtResource("12_ik3iw")]
+[node name="border-high-corner-round2" parent="." instance=ExtResource("12_bxebb")]
 
-[node name="border-high-corner-small2" parent="." instance=ExtResource("13_mmpug")]
+[node name="border-high-corner-small2" parent="." instance=ExtResource("13_ybucc")]
 
-[node name="border-high-corner2" parent="." instance=ExtResource("14_7s7uw")]
+[node name="border-high-corner2" parent="." instance=ExtResource("14_j3pe5")]
 
-[node name="border-high2" parent="." instance=ExtResource("15_g05g1")]
+[node name="border-high2" parent="." instance=ExtResource("15_nvrx8")]
 
-[node name="border2" parent="." instance=ExtResource("16_smf7h")]
+[node name="border2" parent="." instance=ExtResource("16_1fm6n")]
 
-[node name="column-thin2" parent="." instance=ExtResource("17_ni7hu")]
+[node name="column-thin2" parent="." instance=ExtResource("17_j1qfq")]
 
-[node name="column-wide2" parent="." instance=ExtResource("18_m7qoc")]
+[node name="column-wide2" parent="." instance=ExtResource("18_cympb")]
 
-[node name="column2" parent="." instance=ExtResource("19_jfhmi")]
+[node name="column2" parent="." instance=ExtResource("19_tieoq")]
 
-[node name="detail-pipe2" parent="." instance=ExtResource("20_1p05m")]
+[node name="detail-pipe2" parent="." instance=ExtResource("20_ymmiv")]
 
-[node name="door-rotate-round-a2" parent="." instance=ExtResource("21_21e24")]
+[node name="door-rotate-round-a2" parent="." instance=ExtResource("21_fnivq")]
 
-[node name="door-rotate-round-b2" parent="." instance=ExtResource("22_nsbqr")]
+[node name="door-rotate-round-b2" parent="." instance=ExtResource("22_b26rp")]
 
-[node name="door-rotate-round-c2" parent="." instance=ExtResource("23_hh2wv")]
+[node name="door-rotate-round-c2" parent="." instance=ExtResource("23_2crne")]
 
-[node name="door-rotate-round-d2" parent="." instance=ExtResource("24_o6pe0")]
+[node name="door-rotate-round-d2" parent="." instance=ExtResource("24_j7ifr")]
 
-[node name="door-rotate-square-a2" parent="." instance=ExtResource("25_jnk7v")]
+[node name="door-rotate-square-a2" parent="." instance=ExtResource("25_ty460")]
 
-[node name="door-rotate-square-b2" parent="." instance=ExtResource("26_j4jjj")]
+[node name="door-rotate-square-b2" parent="." instance=ExtResource("26_rjhcf")]
 
-[node name="door-rotate-square-c2" parent="." instance=ExtResource("27_u67ut")]
+[node name="door-rotate-square-c2" parent="." instance=ExtResource("27_thus1")]
 
-[node name="door-rotate-square-d2" parent="." instance=ExtResource("28_gtspc")]
+[node name="door-rotate-square-d2" parent="." instance=ExtResource("28_frdyb")]
 
-[node name="floor-corner-diagonal2" parent="." instance=ExtResource("29_2oa6p")]
+[node name="floor-corner-diagonal2" parent="." instance=ExtResource("29_cpgp7")]
 
-[node name="floor-corner-round2" parent="." instance=ExtResource("30_fysob")]
+[node name="floor-corner-round2" parent="." instance=ExtResource("30_cdppg")]
 
-[node name="floor-half2" parent="." instance=ExtResource("31_00052")]
+[node name="floor-half2" parent="." instance=ExtResource("31_gxaox")]
 
-[node name="floor-quarter2" parent="." instance=ExtResource("32_fgrxc")]
+[node name="floor-quarter2" parent="." instance=ExtResource("32_3tcj2")]
 
-[node name="floor2" parent="." instance=ExtResource("33_csct8")]
+[node name="floor2" parent="." instance=ExtResource("33_xru5t")]
 
-[node name="gutter-vertical-bottom2" parent="." instance=ExtResource("34_bejwl")]
+[node name="gutter-vertical-bottom2" parent="." instance=ExtResource("34_vsy37")]
 
-[node name="gutter-vertical-short2" parent="." instance=ExtResource("35_rk8ox")]
+[node name="gutter-vertical-short2" parent="." instance=ExtResource("35_l4y78")]
 
-[node name="gutter-vertical-top2" parent="." instance=ExtResource("36_bp6s8")]
+[node name="gutter-vertical-top2" parent="." instance=ExtResource("36_gp3rp")]
 
-[node name="gutter-vertical-wall2" parent="." instance=ExtResource("37_fbljx")]
+[node name="gutter-vertical-wall2" parent="." instance=ExtResource("37_tyi5c")]
 
-[node name="gutter-vertical2" parent="." instance=ExtResource("38_qybcq")]
+[node name="gutter-vertical2" parent="." instance=ExtResource("38_a00kg")]
 
-[node name="plating-detailed-wide2" parent="." instance=ExtResource("39_ljcjh")]
+[node name="plating-detailed-wide2" parent="." instance=ExtResource("39_c246e")]
 
-[node name="plating-detailed2" parent="." instance=ExtResource("40_lxcuy")]
+[node name="plating-detailed2" parent="." instance=ExtResource("40_8n31s")]
 
-[node name="plating-wide2" parent="." instance=ExtResource("41_2u1y0")]
+[node name="plating-wide2" parent="." instance=ExtResource("41_1jp7e")]
 
-[node name="plating2" parent="." instance=ExtResource("42_xpwdh")]
+[node name="plating2" parent="." instance=ExtResource("42_rc823")]
 
-[node name="roof-flat-center2" parent="." instance=ExtResource("43_34ciy")]
+[node name="roof-flat-center2" parent="." instance=ExtResource("43_tti5g")]
 
-[node name="roof-flat-corner-inner2" parent="." instance=ExtResource("44_cvo44")]
+[node name="roof-flat-corner-inner2" parent="." instance=ExtResource("44_dknf1")]
 
-[node name="roof-flat-corner2" parent="." instance=ExtResource("45_tvinr")]
+[node name="roof-flat-corner2" parent="." instance=ExtResource("45_mqiai")]
 
-[node name="roof-flat-patch-large2" parent="." instance=ExtResource("46_apjfu")]
+[node name="roof-flat-patch-large2" parent="." instance=ExtResource("46_8ghpt")]
 
-[node name="roof-flat-patch2" parent="." instance=ExtResource("47_4v1br")]
+[node name="roof-flat-patch2" parent="." instance=ExtResource("47_7q1qf")]
 
-[node name="roof-flat-side2" parent="." instance=ExtResource("48_vitsi")]
+[node name="roof-flat-side2" parent="." instance=ExtResource("48_762jb")]
 
-[node name="roof-flat-square2" parent="." instance=ExtResource("49_g70k4")]
+[node name="roof-flat-square2" parent="." instance=ExtResource("49_4u8ht")]
 
-[node name="stairs-center-short2" parent="." instance=ExtResource("50_r3fgj")]
+[node name="stairs-center-short2" parent="." instance=ExtResource("50_oe5al")]
 
-[node name="stairs-center2" parent="." instance=ExtResource("51_milkf")]
+[node name="stairs-center2" parent="." instance=ExtResource("51_yeulv")]
 
-[node name="stairs-closed-short2" parent="." instance=ExtResource("52_3fl7k")]
+[node name="stairs-closed-short2" parent="." instance=ExtResource("52_2grht")]
 
-[node name="stairs-closed2" parent="." instance=ExtResource("53_6i3oj")]
+[node name="stairs-closed2" parent="." instance=ExtResource("53_0ggbv")]
 
-[node name="stairs-open-short2" parent="." instance=ExtResource("54_uwth8")]
+[node name="stairs-open-short2" parent="." instance=ExtResource("54_wi448")]
 
-[node name="stairs-open2" parent="." instance=ExtResource("55_v4cow")]
+[node name="stairs-open2" parent="." instance=ExtResource("55_1q7j6")]
 
-[node name="stairs-sides-short2" parent="." instance=ExtResource("56_vr86o")]
+[node name="stairs-sides-short2" parent="." instance=ExtResource("56_qn1xi")]
 
-[node name="stairs-sides2" parent="." instance=ExtResource("57_vck64")]
+[node name="stairs-sides2" parent="." instance=ExtResource("57_rfr57")]
 
-[node name="wall-corner-column-bottom2" parent="." instance=ExtResource("58_fisf2")]
+[node name="wall-corner-column-bottom2" parent="." instance=ExtResource("58_cpb1r")]
 
-[node name="wall-corner-column-small-bottom2" parent="." instance=ExtResource("59_qu2r8")]
+[node name="wall-corner-column-small-bottom2" parent="." instance=ExtResource("59_ojmun")]
 
-[node name="wall-corner-column-small2" parent="." instance=ExtResource("60_43cdu")]
+[node name="wall-corner-column-small2" parent="." instance=ExtResource("60_ps5nu")]
 
-[node name="wall-corner-column2" parent="." instance=ExtResource("61_ejrjp")]
+[node name="wall-corner-column2" parent="." instance=ExtResource("61_qxifi")]
 
-[node name="wall-corner-diagonal2" parent="." instance=ExtResource("62_7fjgo")]
+[node name="wall-corner-diagonal2" parent="." instance=ExtResource("62_w3rjh")]
 
-[node name="wall-corner-round2" parent="." instance=ExtResource("63_d1dw4")]
+[node name="wall-corner-round2" parent="." instance=ExtResource("63_vja5r")]
 
-[node name="wall-corner2" parent="." instance=ExtResource("64_caitl")]
+[node name="wall-corner2" parent="." instance=ExtResource("64_map05")]
 
-[node name="wall-doorway-round2" parent="." instance=ExtResource("65_1of8q")]
+[node name="wall-doorway-round2" parent="." instance=ExtResource("65_fr4ki")]
 
-[node name="wall-doorway-square2" parent="." instance=ExtResource("66_joy02")]
+[node name="wall-doorway-square2" parent="." instance=ExtResource("66_xx8vq")]
 
-[node name="wall-doorway-wide-round2" parent="." instance=ExtResource("67_0w6tu")]
+[node name="wall-doorway-wide-round2" parent="." instance=ExtResource("67_5gp7b")]
 
-[node name="wall-doorway-wide-square2" parent="." instance=ExtResource("68_c87uj")]
+[node name="wall-doorway-wide-square2" parent="." instance=ExtResource("68_jotae")]
 
-[node name="wall-half2" parent="." instance=ExtResource("69_sq2ug")]
+[node name="wall-half2" parent="." instance=ExtResource("69_litpk")]
 
-[node name="wall-low2" parent="." instance=ExtResource("70_eeup1")]
+[node name="wall-low2" parent="." instance=ExtResource("70_llm0j")]
 
-[node name="wall-window-round-detailed2" parent="." instance=ExtResource("71_flr6o")]
+[node name="wall-window-round-detailed2" parent="." instance=ExtResource("71_d6qim")]
 
-[node name="wall-window-round2" parent="." instance=ExtResource("72_t5c03")]
+[node name="wall-window-round2" parent="." instance=ExtResource("72_71h3r")]
 
-[node name="wall-window-square-detailed2" parent="." instance=ExtResource("73_sb3ek")]
+[node name="wall-window-square-detailed2" parent="." instance=ExtResource("73_uwja7")]
 
-[node name="wall-window-square2" parent="." instance=ExtResource("74_net0s")]
+[node name="wall-window-square2" parent="." instance=ExtResource("74_xuq2o")]
 
-[node name="wall-window-wide-round-detailed2" parent="." instance=ExtResource("75_rjvke")]
+[node name="wall-window-wide-round-detailed2" parent="." instance=ExtResource("75_ffyhn")]
 
-[node name="wall-window-wide-round2" parent="." instance=ExtResource("76_im0o3")]
+[node name="wall-window-wide-round2" parent="." instance=ExtResource("76_k0k6a")]
 
-[node name="wall-window-wide-square-detailed2" parent="." instance=ExtResource("77_bom3l")]
+[node name="wall-window-wide-square-detailed2" parent="." instance=ExtResource("77_e6o01")]
 
-[node name="wall-window-wide-square2" parent="." instance=ExtResource("78_ubg3a")]
+[node name="wall-window-wide-square2" parent="." instance=ExtResource("78_1ahs5")]
 
-[node name="wall2" parent="." instance=ExtResource("79_ysf6h")]
+[node name="wall2" parent="." instance=ExtResource("79_jfih2")]
+
+[node name="tree" parent="." instance=ExtResource("80_c6sw2")]
