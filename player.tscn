@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4mheb7veolmm"]
+[gd_scene load_steps=7 format=3 uid="uid://b4mheb7veolmm"]
 
 [ext_resource type="Texture2D" uid="uid://m448htoeiasi" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://v0eh3b2hgwoo" path="res://Player.gd" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://s07j2k8lfkbn" path="res://Player1.glb" id="3_hqtel"]
 [ext_resource type="PackedScene" uid="uid://k0fb4d0e6lps" path="res://Free 3D Modular Game Assets For Prototyping/Character/Character.fbx" id="3_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://bjj1u32y8pfla" path="res://playeranimation.tscn" id="5_2hs0m"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 radius = 0.561309
@@ -14,6 +15,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0981694, 0)
 script = ExtResource("1_onrkg")
 movement_speed = 4.0
 sprint_speed = 8.0
+sneak_speed = 2.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 0.76556, 1.84768, 0, -1.84768, 0.76556, 0, 10, 4)
@@ -36,6 +38,9 @@ spot_angle = 26.82
 
 [node name="Player1" parent="WASDrotation" instance=ExtResource("3_hqtel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.963881, -0.256382)
+visible = false
+
+[node name="Playerwithfixed2" parent="WASDrotation" instance=ExtResource("5_2hs0m")]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2.33844, 0)
