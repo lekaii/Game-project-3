@@ -1,26 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://ber13no23304s"]
+[gd_scene load_steps=4 format=3 uid="uid://ber13no23304s"]
 
 [ext_resource type="Script" uid="uid://diq6r1gm435a8" path="res://ghost.gd" id="1_6attn"]
-[ext_resource type="PackedScene" uid="uid://dge1labwwvv2i" path="res://Free 3D Modular Game Assets For Prototyping/Pieces/arrow.fbx" id="2_obmiq"]
 [ext_resource type="PackedScene" uid="uid://bmuvdro3jvgdv" path="res://StaticManCutout.glb" id="4_xtt71"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v5pp4"]
-radius = 8.44186
-height = 25.8153
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_obmiq"]
+radius = 1.5
+height = 9.91034
 
 [node name="Ghost" type="CharacterBody3D"]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_6attn")
 movement_speed = 0.5
+locked_y_position = 1.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23255, 14.4975, -0.000138283)
-shape = SubResource("CapsuleShape3D_v5pp4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.53167, 0)
+shape = SubResource("CapsuleShape3D_obmiq")
 
 [node name="StaticManCutout" parent="." instance=ExtResource("4_xtt71")]
-transform = Transform3D(-0.5, 5.75407e-08, 3.24839e-08, -6.60741e-08, -0.437589, -0.241901, 5.90894e-10, -0.241901, 0.437589, 0, 13.0935, 2.46756)
-
-[node name="arrow" parent="." instance=ExtResource("2_obmiq")]
-transform = Transform3D(3, 0, 0, 0, -3.93403e-07, -3, 0, 9, -1.31134e-07, -25.0274, 17.734, -11.6499)
-visible = false
+transform = Transform3D(-0.04, 4.60325e-09, 2.59871e-09, -5.28593e-09, -0.0350071, -0.0193521, 4.72727e-11, -0.0193521, 0.0350071, 0, 2, -0.027)
