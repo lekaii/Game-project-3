@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://x432iixcynqj"]
+
+[ext_resource type="Script" uid="uid://md7pw5efmvmj" path="res://exposition.gd" id="1_4mghe"]
+[ext_resource type="Script" uid="uid://vhodbfatsv3l" path="res://ExpositionLabel.gd" id="1_u3jjx"]
+[ext_resource type="Script" uid="uid://skjp6rqevtqd" path="res://ExpositionContinueLabel.gd" id="3_n5nf8"]
+
+[node name="Exposition" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4mghe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1158.0
+offset_bottom = 655.0
+color = Color(0, 0, 0, 1)
+
+[node name="Exposition" type="Label" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 92.0
+offset_right = 820.0
+offset_bottom = 472.0
+text = "The Nightveil Hotel is full of mystery, 
+with rumors about people disappearing and strange things happening.
+
+You are a traveler looking for a place to stay for the night. 
+Snow is falling heavily outside, and you have no choice but to stay here."
+script = ExtResource("1_u3jjx")
+
+[node name="Timer" type="Timer" parent="Exposition"]
+
+[node name="Continue" type="Label" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 432.0
+offset_right = 820.0
+offset_bottom = 582.0
+text = "Press ENTER to continue"
+script = ExtResource("3_n5nf8")
+delayed_text = "Press ENTER to continue"
+delay_seconds = 13.0
+fade_duration = 0.7
+
+[node name="Timer" type="Timer" parent="Continue"]
+one_shot = true
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[connection signal="timeout" from="Exposition/Timer" to="Exposition" method="_on_timer_timeout"]

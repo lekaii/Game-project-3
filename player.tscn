@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://k0fb4d0e6lps" path="res://Free 3D Modular Game Assets For Prototyping/Character/Character.fbx" id="3_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://bjj1u32y8pfla" path="res://playeranimation.tscn" id="5_2hs0m"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
-radius = 0.561309
-height = 3.31419
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sweqy"]
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0981694, 0)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_onrkg")
 movement_speed = 4.0
 sprint_speed = 8.0
@@ -28,7 +28,7 @@ transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.7
 texture = ExtResource("1_4flbx")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="RotatingPart"]
-transform = Transform3D(-2, 1.74846e-07, -1.59191e-13, -1.69349e-07, -1.93712, 0.49755, 4.34971e-08, 0.49755, 1.93712, 0, 1.364, -0.499763)
+transform = Transform3D(-2, 1.74846e-07, -2.48009e-13, -1.69349e-07, -1.93712, 0.497551, 4.34971e-08, 0.497551, 1.93712, 0, 1.364, -0.46514)
 light_energy = 8.111
 shadow_enabled = true
 spot_range = 37.557
@@ -52,7 +52,7 @@ omni_range = 3.311
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.871343, 0)
-shape = SubResource("CapsuleShape3D_onrkg")
+shape = SubResource("CapsuleShape3D_sweqy")
 
 [node name="Character" parent="." instance=ExtResource("3_i3pqv")]
 visible = false

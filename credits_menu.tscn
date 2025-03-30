@@ -37,10 +37,10 @@ text = "Back"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 2
-offset_left = 375.0
-offset_top = 90.0
-offset_right = 775.0
-offset_bottom = 490.0
+offset_left = 177.0
+offset_top = 96.0
+offset_right = 577.0
+offset_bottom = 496.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Rafael
 	Project management, Le big boss
@@ -59,6 +59,20 @@ Kristian
 
 Sharon
 	Narrative"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 98.0
+offset_right = 1005.0
+offset_bottom = 498.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Map Assets
+	Kenney.nl
+
+Dialogue stuff
+	Dialogic 2 (Alpha 16)"
 fit_content = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
