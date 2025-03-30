@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://boscwn1glkdf0"]
+
+[ext_resource type="PackedScene" uid="uid://d384pc5loa4rc" path="res://custodian_animations.tscn" id="1_abc0l"]
+
+[node name="Custodian" type="CharacterBody3D"]
+
+[node name="CustodianAnimations" parent="." instance=ExtResource("1_abc0l")]
