@@ -23,7 +23,7 @@ func crossfade_to(new_music: AudioStreamPlayer):
 	if not new_music.playing:
 		new_music.play()  # If area is entered first time, song is loaded
 	
-	await tween.finished  # Wait for the fade-out to complete
+	#await tween.finished  # Wait fade-out to compl
 	current_music = new_music
 
 # Create these for new areas as needed
