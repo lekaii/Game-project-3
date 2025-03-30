@@ -12,6 +12,7 @@ height = 25.8153
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_6attn")
+movement_speed = 0.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23255, 14.4975, -0.000138283)
