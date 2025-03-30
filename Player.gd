@@ -1,6 +1,7 @@
 extends CharacterBody3D
 @export var movement_speed : float = 200
 @export var sprint_speed : float = 500
+@export var sneak_speed : float = 100
 var character_direction : Vector3
 
 @onready var camera = $Camera3D
@@ -37,7 +38,6 @@ func _physics_process(delta):
 	character_direction.x = Input.get_axis("move_left", "move_right")
 	character_direction.z = Input.get_axis("move_up", "move_down")
 	
-	print(character_direction.x)
 	
 	if character_direction.x:
 		WASDdirection = character_direction.x * 2 * 0.7854
@@ -61,10 +61,32 @@ func _physics_process(delta):
 	
 	var speed = 0
 	if Input.is_action_pressed("sprint"):
+		Globals.player_is_sprinting = true
+		Globals.player_is_walking = false
+		Globals.player_is_sneaking = false
+		Globals.player_is_idle = false
+		
 		speed = sprint_speed
+	elif Input.is_action_pressed("sneak"):
+		Globals.player_is_sprinting = false
+		Globals.player_is_walking = false
+		Globals.player_is_sneaking = true
+		Globals.player_is_idle = false
+		
+		speed = sneak_speed
 	else:
+		Globals.player_is_sprinting = false
+		Globals.player_is_walking = true
+		Globals.player_is_sneaking = false
+		Globals.player_is_idle = false
+		
 		speed = movement_speed
 	
+	if !character_direction.x and !character_direction.z:
+		Globals.player_is_sneaking = false
+		Globals.player_is_walking = false
+		Globals.player_is_sprinting = false
+		Globals.player_is_idle = true
 	
 	if character_direction:
 		velocity = character_direction * speed
@@ -73,6 +95,5 @@ func _physics_process(delta):
 	
 	Globals.player_position = global_position
 	
-	print(Globals.player_position)
 	
 	move_and_slide()
