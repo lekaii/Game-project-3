@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bmuvdro3jvgdv" path="res://StaticManCutout.glb" id="4_xtt71"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_obmiq"]
-radius = 1.5
+radius = 0.766177
 height = 9.91034
 
 [node name="Ghost" type="CharacterBody3D"]
@@ -19,4 +19,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.53167, 0)
 shape = SubResource("CapsuleShape3D_obmiq")
 
 [node name="StaticManCutout" parent="." instance=ExtResource("4_xtt71")]
-transform = Transform3D(-0.04, 4.60325e-09, 2.59871e-09, -5.28593e-09, -0.0350071, -0.0193521, 4.72727e-11, -0.0193521, 0.0350071, 0, 2, -0.027)
+transform = Transform3D(-0.02, 3.45244e-09, 1.29936e-09, -2.62829e-09, -0.0275357, -0.00793816, 2.79093e-10, -0.0119072, 0.0183572, 0, 1.72602, -0.00395863)
