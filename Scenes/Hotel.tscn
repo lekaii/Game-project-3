@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cjchv2lh22rm6"]
+[gd_scene load_steps=31 format=3 uid="uid://cjchv2lh22rm6"]
 
 [ext_resource type="MeshLibrary" uid="uid://cw7bnqf6jsdim" path="res://Assets/floor_gridmap.tres" id="1_evk5m"]
 [ext_resource type="MeshLibrary" uid="uid://b7hqef6gwj0fq" path="res://Assets/wall_gridmap.tres" id="2_h1tg3"]
@@ -20,6 +20,7 @@
 [ext_resource type="MeshLibrary" uid="uid://c6a04qd4dndlu" path="res://Assets/furniture_mesh.tres" id="13_7sibf"]
 [ext_resource type="Script" uid="uid://cfx8xxky3dl77" path="res://Scenes/room_13_light.gd" id="15_7xva1"]
 [ext_resource type="Script" uid="uid://cwe2ye3ut5e7x" path="res://Scripts/hotel_lights.gd" id="16_yw43b"]
+[ext_resource type="MeshLibrary" uid="uid://cauglv4j4wbcw" path="res://Assets/maze_mesh.tres" id="21_vsg4k"]
 
 [sub_resource type="Sky" id="Sky_h1tg3"]
 
@@ -34,8 +35,8 @@ tonemap_exposure = 0.3
 ssr_enabled = true
 ssr_fade_in = 0.332871
 sdfgi_enabled = true
-fog_light_color = Color(0.0119747, 0.0144936, 0.0190329, 1)
-fog_density = 0.1047
+fog_light_color = Color(0.874733, 0.887588, 0.907795, 1)
+fog_density = 0.3047
 adjustment_enabled = true
 adjustment_brightness = 0.75
 adjustment_contrast = 1.17
@@ -363,6 +364,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.804477, 0, 0.51639)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DoorManager/Door_ht_6/hotel_6_area"]
 transform = Transform3D(1.00497, 0, -1.04308e-07, 0, 1, 0, -1.49012e-08, 0, 1.23796, -0.140011, 0.741974, 0.0716534)
 shape = SubResource("BoxShape3D_cbuyl")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("21_vsg4k")
+data = {
+"cells": PackedInt32Array(1, 1, 655360, 0, 1, 655360)
+}
 
 [connection signal="body_entered" from="DialogueManager/AreaCustodian" to="DialogueManager" method="_on_area_custodian_body_entered"]
 [connection signal="body_entered" from="DialogueManager/Areadoor_roomevent" to="DialogueManager" method="_on_areadoor_roomevent_body_entered"]
