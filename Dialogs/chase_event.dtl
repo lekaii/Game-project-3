@@ -1,0 +1,19 @@
+[signal arg="hotel_13"]
+[signal arg="lobby_right"]
+[signal arg="hotel_lights"]
+[signal arg="cantmove"]
+[signal arg="safe_south"]
+[sound path="res://Audio/sucked-into-classroom-103774.mp3" volume="0.0"]
+As you step out into the hallway, the lights suddenly go out, and door slams shut behind you!
+[sound path="res://Audio/bang_right.wav" volume="0.0"]
+The hotel is now in complete darkness.\
+A loud bang echoes at the end of the hall.
+[sound path="res://Audio/scrape_righttoleft.wav" volume="0.0"]
+Then, you hear something dragging itself toward you.
+[sound path="res://Audio/get_ready_to_the_next_fight_sielxm3d-83870.mp3" volume="0.0"]
+A cold whisper fills the air. (”You shouldn’t be here...”)\
+A ghostly figure appears in the hallway.
+[sound path="res://Audio/monster-roar-131214.mp3" volume="0.0"]
+Suddenly, it lunges at you!
+[signal arg="canmove"]
+set {chasestarted} = "true"

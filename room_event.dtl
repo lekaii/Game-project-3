@@ -1,0 +1,12 @@
+[signal arg="cantmove"]
+You walked around, but just as your body starts to relax, the telephone on the small wooden nightstand rings abruptly.
+[signal arg="phone"]
+You freeze. The sound is jarring against the silence. Slowly, you reach out and lift the receiver to your ear.
+[sound path="res://Audio/phone_getout.wav" volume="0.0"]
+A distorted voice whispers\: "Get out now. Or stay—forever."
+[signal arg="roomlight"]
+player: Your heart pounds. "What? Who is this?"
+But there is no response—only the sound of faint static before the line goes dead. The silence that follows is even more suffocating.
+[signal arg="canmove"]
+set {roomevent} = "true"
+set {chasedone} = "true"

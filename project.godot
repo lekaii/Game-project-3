@@ -28,21 +28,27 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Custodian": "res://Dialogs/Custodian.dtl",
+"chase_event": "res://Dialogs/chase_event.dtl",
 "hotel_1": "res://Dialogs/hotel_1.dtl",
 "hotel_13": "res://Dialogs/hotel_13.dtl",
 "hotel_2": "res://Dialogs/hotel_2.dtl",
 "hotel_3": "res://Dialogs/hotel_3.dtl",
 "hotel_4": "res://Dialogs/hotel_4.dtl",
 "hotel_5": "res://Dialogs/hotel_5.dtl",
-"hotel_6": "res://Dialogs/hotel_6.dtl"
+"hotel_6": "res://Dialogs/hotel_6.dtl",
+"room_event": "res://room_event.dtl",
+"saferoom": "res://Dialogs/saferoom.dtl"
 }
 layout/style_list=["res://Dialogs/style.tres"]
 layout/default_style="res://Dialogs/style.tres"
 variables={
 "13entered": "false",
 "chasedone": "false",
+"chasestarted": "false",
 "intermissiondone": "false",
-"introdone": "false"
+"introdone": "false",
+"roomevent": "false",
+"saferoomfirst": "true"
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -68,6 +74,10 @@ movie_writer/movie_file="C:/Users/emils/OneDrive/Documents/in-sound-control-v2/v
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 

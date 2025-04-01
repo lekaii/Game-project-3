@@ -1,0 +1,8 @@
+if {saferoomfirst} == "true":
+	After a desperate chase, you stumble into a hidden room—the Safe Room.
+	Inside, you find an old flashlight on a table. You pick it up.
+	[signal arg="flashlight"]
+	The dim light cuts through the darkness, and you feel a moment of relief.
+	player: There's something written on it... “The light keeps them away. But not for long.”
+	set {saferoomfirst} = "false"
+	set {intermissiondone} = "true"

@@ -9,7 +9,33 @@ var rayOrigin = Vector3()
 var rayEnd = Vector3()
 var WASDdirection = 0
 
+@onready var flashlight = $RotatingPart
+var can_move: bool = true
+
+# turn on the flashlight until it is found
+func _ready():
+	flashlight.visible = false
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+func _on_dialogic_signal(argument:String):
+	#setting player movement to stop during cutscenes
+	if argument == "cantmove":
+		can_move = false
+	if argument == "canmove":
+		can_move = true
+	if argument == "flashlight":
+		flashlight.visible = true
+
+
+
+
+
 func _physics_process(delta):
+	if not can_move:
+		velocity = Vector3.ZERO
+		move_and_slide() 
+		return  # cant move, leaving this process
+
 	# Define the plane's Y-coordinate
 	var plane_y = 0.0  # Change this to your desired Y-coordinate
 
