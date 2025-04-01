@@ -1,0 +1,11 @@
+if {introdone} == "false":
+	You see The receptionist, an old man with pale skin and hollow eyes, standing behind the counter. His suit looks neat but a little worn out.
+	custodian: Welcome to The Nightveil Hotel. Do you have a reservation?
+	player: No, I’m just a traveler looking for a place to stay. May I?
+	The receptionist stares at you for a moment before grabbing an old book from the counter. He flips through the pages, and you can hear the rustling of paper in the quiet lobby.
+	[sound path="res://Audio/papers-flapping-intense-79998.mp3" volume="0.0"]
+	He pulls out a heavy brass key and hands it to you.He points to a dusty cash box on the desk, with a few coins scattered inside. 
+	You take some crumpled bills from your pocket and put them on the counter. The receptionist doesn’t look at you, but he silently places the key in your hand and nods.
+	set {introdone} = "true"
+	[signal arg="lobby_right"]
+custodian: Room 13, turn right from the right door and it is the first one on the right.

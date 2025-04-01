@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="In Sound Control v2"
-run/main_scene="res://Mainscene.tscn"
+run/main_scene="uid://c6g3uo4y4uqvn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,8 +22,44 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"custodian": "res://Dialogs/custodian.dch",
+"player": "res://Dialogs/player.dch"
+}
+directories/dtl_directory={
+"Custodian": "res://Dialogs/Custodian.dtl",
+"hotel_1": "res://Dialogs/hotel_1.dtl",
+"hotel_13": "res://Dialogs/hotel_13.dtl",
+"hotel_2": "res://Dialogs/hotel_2.dtl",
+"hotel_3": "res://Dialogs/hotel_3.dtl",
+"hotel_4": "res://Dialogs/hotel_4.dtl",
+"hotel_5": "res://Dialogs/hotel_5.dtl",
+"hotel_6": "res://Dialogs/hotel_6.dtl"
+}
+layout/style_list=["res://Dialogs/style.tres"]
+layout/default_style="res://Dialogs/style.tres"
+variables={
+"13entered": "false",
+"chasedone": "false",
+"intermissiondone": "false",
+"introdone": "false"
+}
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/join_default_wait=true
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
 
 [editor]
 

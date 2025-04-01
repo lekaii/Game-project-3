@@ -1,0 +1,6 @@
+if {13entered} == "false":
+	You open the door to your room.
+	[signal arg="hotel_13"]
+	The room is small but clean. The wallpaper is peeling, the bed creaks, and a single lamp flickers weakly. The only sound is the steady ticking of a clock. 
+	set {13entered} = "true"
+if {introdone} == "true":
