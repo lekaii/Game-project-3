@@ -15,7 +15,7 @@ var can_move: bool = true
 
 # turn on the flashlight until it is found
 func _ready():
-	flashlight.visible = start_flashlight
+	flashlight.visible = start_flashlight	
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _on_dialogic_signal(argument:String):

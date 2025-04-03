@@ -3,3 +3,5 @@ if {intermissiondone} == "false":
 		player: It's locked by some force...
 	else:
 		player: This isn't my room... What did the receptionist tell me?
+else:
+	[signal arg="hotel_3"]

@@ -36,3 +36,28 @@ func _on_area_saferoom_body_entered(body: Node3D) -> void:
 func _on_area_phone_body_entered(body: Node3D) -> void:
 	if body.name == "Player" && str(Dialogic.VAR.phonedone).to_lower() == "false":
 		Dialogic.start("phonecall")
+
+
+func _on_area_newspaper_body_entered(body: Node3D) -> void:
+	if body.name == "Player" && str(Dialogic.VAR.paintingkey).to_lower() == "false":
+		Dialogic.start("newspaper")
+
+
+func _on_area_key_body_entered(body: Node3D) -> void:
+	if body.name == "Player" && str(Dialogic.VAR.breakroomkey).to_lower() == "false":
+		Dialogic.start("area_key")
+
+
+func _on_area_note_body_entered(body: Node3D) -> void:
+	if body.name == "Player":
+		Dialogic.start("area_note")
+
+
+func _on_area_painting_body_entered(body: Node3D) -> void:
+	if body.name == "Player" && str(Dialogic.VAR.paintingkey).to_lower() == "true" && str(Dialogic.VAR.paintingopen).to_lower() == "false":
+		Dialogic.start("painting")
+
+
+func _on_area_passage_body_entered(body: Node3D) -> void:
+	if body.name == "Player":
+		Dialogic.start("passage")

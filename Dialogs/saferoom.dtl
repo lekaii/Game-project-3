@@ -1,4 +1,5 @@
 if {saferoomfirst} == "true":
+	[signal arg="spotinvisible"]
 	After a desperate chase, you stumble into a hidden room—the Safe Room.
 	Inside, you find an old flashlight on a table. You pick it up.
 	[signal arg="flashlight"]
@@ -7,3 +8,4 @@ if {saferoomfirst} == "true":
 	set {saferoomfirst} = "false"
 	set {intermissiondone} = "true"
 	set {roomsAreSafe} = "false"
+	[signal arg="newspaperglow"]

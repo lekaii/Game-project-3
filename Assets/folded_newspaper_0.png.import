@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cntquryd3kjj"
+path.s3tc="res://.godot/imported/folded_newspaper_0.png-a1dfe2dc445a43a6398dc50d275d5c88.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "2360c09dd801d4649a26aba1ba2f2af0"
+}
+
+[deps]
+
+source_file="res://Assets/folded_newspaper_0.png"
+dest_files=["res://.godot/imported/folded_newspaper_0.png-a1dfe2dc445a43a6398dc50d275d5c88.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

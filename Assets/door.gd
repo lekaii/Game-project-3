@@ -34,7 +34,11 @@ func move_door():
 	var tween = create_tween()
 	var target_rotation = open_rotation if not is_open else closed_rotation
 	
-	tween.tween_property(self, "rotation", target_rotation, 0.5)
+	# Special case so player wont be yeeted outside the map!
+	if door_name != "hotel_6" && door_name != "safe_south":
+		tween.tween_property(self, "rotation", target_rotation, 0.5)
+	else:
+		tween.tween_property(self, "rotation", Vector3(0, deg_to_rad(-180), 0), 0.5)
 	
 	if !is_open:
 		audio_player.play()

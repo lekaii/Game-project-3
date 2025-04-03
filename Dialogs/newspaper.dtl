@@ -1,0 +1,9 @@
+You see an old newspaper. Do you want to read it?
+- Yes
+	[background arg="res://Assets/Newspaper.png" fade="0.0"]
+	[wait_input]
+	player: Huh... That's over 100 years old! This hotel shouldn’t exist anymore!
+	player: Wait... That old man at the reception is in the picture!
+	Then, you see something even worse.
+	In the background, inside the hotel’s windows, dozens of shadowy faces are staring out.
+- No

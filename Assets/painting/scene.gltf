@@ -1,0 +1,346 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 15090,
+      "max": [
+        132.37855529785156,
+        286.0596923828125,
+        0.7338103652000427
+      ],
+      "min": [
+        -121.11366271972656,
+        11.171847343444824,
+        -9.355202674865723
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 181080,
+      "componentType": 5126,
+      "count": 15090,
+      "max": [
+        0.9999774098396301,
+        0.9999509453773499,
+        0.9999565482139587
+      ],
+      "min": [
+        -0.9999411702156067,
+        -0.9999626874923706,
+        -0.9999563694000244
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 15090,
+      "max": [
+        0.7517699003219604,
+        0.9774954915046692
+      ],
+      "min": [
+        0.2481720745563507,
+        0.019623061642050743
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 24720,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 362160,
+      "componentType": 5126,
+      "count": 448,
+      "max": [
+        120.42097473144531,
+        260.6662292480469,
+        0.4594094753265381
+      ],
+      "min": [
+        -97.88179779052734,
+        34.394287109375,
+        -9.355202674865723
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 367536,
+      "componentType": 5126,
+      "count": 448,
+      "max": [
+        0.9998608827590942,
+        0.9998621940612793,
+        0.9999563097953796
+      ],
+      "min": [
+        -0.9998608827590942,
+        -0.9998621940612793,
+        -0.26512959599494934
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 120720,
+      "componentType": 5126,
+      "count": 448,
+      "max": [
+        0.7274035215377808,
+        0.8877248764038086
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 98880,
+      "componentType": 5125,
+      "count": 747,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Jungle Jim (https://sketchfab.com/jungle_jim)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/beautiful-painting-9275724f094c4af1bae0b09d92b8f56b",
+      "title": "Beautiful Painting"
+    },
+    "generator": "Sketchfab-16.59.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 101868,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 124304,
+      "byteOffset": 101868,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 372912,
+      "byteOffset": 226172,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 599084,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_clearcoat",
+    "KHR_materials_specular"
+  ],
+  "images": [
+    {
+      "uri": "textures/Painting_baseColor.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_clearcoat": {
+          "clearcoatFactor": 0.02758627536028248,
+          "clearcoatRoughnessFactor": 0.57129362640585
+        },
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "specularFactor": 0.516311984165287
+        }
+      },
+      "name": "Painting",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "roughnessFactor": 0.07438023471052169
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Material",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.154785,
+          0.0893555,
+          0.0312805,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Beautiful painting by Jungle Jim_Painting_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Beautiful painting by Jungle Jim_Material_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.9991116523742676,
+        0.008511237800121316,
+        -0.04127291962504387,
+        0.0,
+        0.04127441346645355,
+        -2.2177407054261217e-16,
+        0.9991478323936462,
+        0.0,
+        0.008503984659910202,
+        -0.9999637603759766,
+        -0.00035129635944053383,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "c4324f5c627a4c63b54e355b80f14a86.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Beautiful painting by Jungle Jim"
+    },
+    {
+      "mesh": 0,
+      "name": "Beautiful painting by Jungle Jim_Painting_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Beautiful painting by Jungle Jim_Material_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

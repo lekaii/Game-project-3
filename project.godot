@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="In Sound Control v2"
-run/main_scene="uid://cjchv2lh22rm6"
+run/main_scene="uid://c6g3uo4y4uqvn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -28,6 +28,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Custodian": "res://Dialogs/Custodian.dtl",
+"area_key": "res://Dialogs/area_key.dtl",
+"area_note": "res://Dialogs/area_note.dtl",
 "chase_event": "res://Dialogs/chase_event.dtl",
 "hotel_1": "res://Dialogs/hotel_1.dtl",
 "hotel_13": "res://Dialogs/hotel_13.dtl",
@@ -36,6 +38,9 @@ directories/dtl_directory={
 "hotel_4": "res://Dialogs/hotel_4.dtl",
 "hotel_5": "res://Dialogs/hotel_5.dtl",
 "hotel_6": "res://Dialogs/hotel_6.dtl",
+"newspaper": "res://Dialogs/newspaper.dtl",
+"painting": "res://Dialogs/painting.dtl",
+"passage": "res://Dialogs/passage.dtl",
 "phonecall": "res://Audio/phonecall.dtl",
 "room_event": "res://room_event.dtl",
 "saferoom": "res://Dialogs/saferoom.dtl"
@@ -44,10 +49,14 @@ layout/style_list=["res://Dialogs/style.tres"]
 layout/default_style="res://Dialogs/style.tres"
 variables={
 "13entered": "false",
+"breakroomkey": "false",
 "chasedone": "false",
 "chasestarted": "false",
 "intermissiondone": "false",
 "introdone": "false",
+"newspaper": "true",
+"paintingkey": "false",
+"paintingopen": "false",
 "phonedone": "false",
 "roomevent": "false",
 "roomsAreSafe": "true",

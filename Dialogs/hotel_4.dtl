@@ -3,3 +3,11 @@ if {intermissiondone} == "false":
 		player: It's locked by some force...
 	else:
 		player: This isn't my room... What did the receptionist tell me?
+else:
+	It's a break room for hotel employees, but it's locked.
+	if {breakroomkey} == "false":
+		player: I wonder if key is around somewhere?
+	else:
+		You open the door with cleaner's key.
+		[signal arg="hotel_4"]
+		[signal arg="area_note"]

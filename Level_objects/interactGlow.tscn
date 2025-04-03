@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwitipmg7nc55"]
+
+[ext_resource type="Script" uid="uid://dq3pq3yox107w" path="res://Scripts/interactglow.gd" id="1_joaho"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_rxjrb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_joaho"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.962081, 0.961292, 7.70092e-07, 1)
+emission_enabled = true
+emission = Color(1, 0.813701, 0.45872, 1)
+emission_energy_multiplier = 2.8
+
+[node name="InteractGlow" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.831729, 0.831525, 7.70092e-07, 1)
+light_energy = 1.97
+omni_range = 2.158
+script = ExtResource("1_joaho")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("SphereMesh_rxjrb")
+surface_material_override/0 = SubResource("StandardMaterial3D_joaho")

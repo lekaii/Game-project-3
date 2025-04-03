@@ -1,0 +1,11 @@
+[signal arg="cantmove"]
+A massive, dust-covered painting of the Nightveil Hotel hangs in the back of the room.
+You approach the painting cautiously, eyes darting around the room. You press your hand against the cold frame—but nothing happens.
+Suddenly, a thought strikes you. You raise the flashlight and point its beam directly at the painting’s surface.\
+
+The light flickers, and for a brief moment, the paint seems to shimmer in the flashlight’s glow.
+[sound path="res://Audio/Gameproject-door-opens.wav" volume="0.0"]
+[signal arg="painting_open"]
+With a loud creak, the painting slides open like a door.
+[signal arg="canmove"]
+set {paintingopen} = "true"

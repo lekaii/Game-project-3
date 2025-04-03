@@ -1,0 +1,5 @@
+You see something glimmering, fallen between the two chairs.
+As you reach your hand to it, you realize it is a key, similar to what receptionist gave you.
+player: This must have been dropped by a hotel housekeeper. I should take it.
+set {breakroomkey} = "true"
+[signal arg="area_key_off"]
