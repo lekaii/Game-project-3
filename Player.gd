@@ -10,11 +10,12 @@ var rayEnd = Vector3()
 var WASDdirection = 0
 
 @onready var flashlight = $RotatingPart
+@export var start_flashlight: bool = true  #
 var can_move: bool = true
 
 # turn on the flashlight until it is found
 func _ready():
-	flashlight.visible = false
+	flashlight.visible = start_flashlight
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _on_dialogic_signal(argument:String):

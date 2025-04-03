@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="In Sound Control v2"
-run/main_scene="uid://c6g3uo4y4uqvn"
+run/main_scene="uid://cjchv2lh22rm6"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -36,6 +36,7 @@ directories/dtl_directory={
 "hotel_4": "res://Dialogs/hotel_4.dtl",
 "hotel_5": "res://Dialogs/hotel_5.dtl",
 "hotel_6": "res://Dialogs/hotel_6.dtl",
+"phonecall": "res://Audio/phonecall.dtl",
 "room_event": "res://room_event.dtl",
 "saferoom": "res://Dialogs/saferoom.dtl"
 }
@@ -47,7 +48,9 @@ variables={
 "chasestarted": "false",
 "intermissiondone": "false",
 "introdone": "false",
+"phonedone": "false",
 "roomevent": "false",
+"roomsAreSafe": "true",
 "saferoomfirst": "true"
 }
 text/letter_speed=0.01

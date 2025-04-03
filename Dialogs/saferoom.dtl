@@ -6,3 +6,4 @@ if {saferoomfirst} == "true":
 	player: There's something written on it... “The light keeps them away. But not for long.”
 	set {saferoomfirst} = "false"
 	set {intermissiondone} = "true"
+	set {roomsAreSafe} = "false"

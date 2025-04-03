@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://q5mvjtsfqnkr"]
+[gd_scene load_steps=10 format=4 uid="uid://q5mvjtsfqnkr"]
 
 [ext_resource type="Texture2D" uid="uid://bk84bfv1auurh" path="res://Assets/kensey-building/Textures/colormap.png" id="1_38ogf"]
-[ext_resource type="AudioStream" uid="uid://cqw23wojfg0ux" path="res://Audio/dorm-door-opening-6038.mp3" id="2_6m3o4"]
+[ext_resource type="AudioStream" uid="uid://b6138fcvxga7q" path="res://Audio/Gameproject-door-opens.wav" id="2_3fg5p"]
+[ext_resource type="AudioStream" uid="uid://djqx1ob8fko5t" path="res://Audio/Gameproject-door-closes.wav" id="3_vitd8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qh5lw"]
 resource_name = "colormap"
@@ -95,7 +96,10 @@ mesh = SubResource("ArrayMesh_bg3ka")
 skeleton = NodePath("")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("2_6m3o4")
+stream = ExtResource("2_3fg5p")
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_vitd8")
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(0.0337367, -0.861032, 0.635668, 0.0408735, 0.710689, 0.770141, -0.998595, 0, 0.0529982, 0.256567, 2.15994, 0.404404)

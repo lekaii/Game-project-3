@@ -1,6 +1,7 @@
 extends Node3D
 
 @onready var audio_player = $AudioStreamPlayer3D
+@onready var audio_player2 = $AudioStreamPlayer3D2
 @export var door_name: String = "default_door"  # write door name in editor here
 @onready var prompt_text = $Label3D  # Text label
 @onready var prompt_text2 = $Label3D2  # Text label
@@ -34,7 +35,11 @@ func move_door():
 	var target_rotation = open_rotation if not is_open else closed_rotation
 	
 	tween.tween_property(self, "rotation", target_rotation, 0.5)
-	audio_player.play()
+	
+	if !is_open:
+		audio_player.play()
+	else:
+		audio_player2.play()
 	
 	is_open = !is_open  # Toggle state
 

@@ -8,3 +8,5 @@ func _ready():
 func _on_dialogic_signal(argument:String):
 	if argument == "phone":
 		audio_player.play()
+	if argument == "phoneOff":
+		audio_player.stop()

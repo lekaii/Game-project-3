@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cjchv2lh22rm6"]
+[gd_scene load_steps=32 format=3 uid="uid://cjchv2lh22rm6"]
 
 [ext_resource type="MeshLibrary" uid="uid://cw7bnqf6jsdim" path="res://Assets/floor_gridmap.tres" id="1_evk5m"]
 [ext_resource type="MeshLibrary" uid="uid://b7hqef6gwj0fq" path="res://Assets/wall_gridmap.tres" id="2_h1tg3"]
@@ -6,11 +6,9 @@
 [ext_resource type="Script" uid="uid://bldu3v7735k5s" path="res://Scripts/dialogue_manager.gd" id="4_fchbp"]
 [ext_resource type="Script" uid="uid://ewyxgea8ctgi" path="res://Scripts/music_manager.gd" id="4_roj4x"]
 [ext_resource type="AudioStream" uid="uid://cg50hwakowne1" path="res://Audio/Horrorgame-lobbymusic-Final.wav" id="5_cpkpc"]
-[ext_resource type="AudioStream" uid="uid://b3u02heuxbxk6" path="res://Audio/bg-music.mp3" id="6_frt5s"]
 [ext_resource type="PackedScene" uid="uid://bpstssth14dae" path="res://Assets/low_poly_red_rotary_phone.glb" id="6_jb00i"]
 [ext_resource type="PackedScene" uid="uid://d3v7pv4nc87hu" path="res://Assets/simple_flashlight.glb" id="6_je6h3"]
 [ext_resource type="Script" uid="uid://s2vageu0eqk" path="res://Assets/phone.gd" id="7_7xva1"]
-[ext_resource type="AudioStream" uid="uid://cx2c556rdqp5d" path="res://Audio/safetydance.mp3" id="7_fchbp"]
 [ext_resource type="Script" uid="uid://bymnqvs1pd1bj" path="res://Scripts/flashlight.gd" id="7_vsg4k"]
 [ext_resource type="PackedScene" uid="uid://boscwn1glkdf0" path="res://custodian.tscn" id="8_cpkpc"]
 [ext_resource type="AudioStream" uid="uid://dtenijda01omh" path="res://Audio/old-telephone-ring-2-259004.mp3" id="8_yw43b"]
@@ -18,9 +16,11 @@
 [ext_resource type="PackedScene" uid="uid://q5mvjtsfqnkr" path="res://Assets/Door.tscn" id="11_qai1v"]
 [ext_resource type="Script" uid="uid://dtuilgx87t2wp" path="res://Assets/door.gd" id="12_cbuyl"]
 [ext_resource type="MeshLibrary" uid="uid://c6a04qd4dndlu" path="res://Assets/furniture_mesh.tres" id="13_7sibf"]
+[ext_resource type="AudioStream" uid="uid://c6ly686ujpjhw" path="res://Audio/Gameproject-hallway-ambient.wav" id="13_vsg4k"]
+[ext_resource type="AudioStream" uid="uid://ccttu6a1fe36" path="res://Audio/Gameproject-saferoom-music-FINAL-mp3.mp3" id="14_qmgrn"]
 [ext_resource type="Script" uid="uid://cfx8xxky3dl77" path="res://Scenes/room_13_light.gd" id="15_7xva1"]
+[ext_resource type="AudioStream" uid="uid://oawajwgghfib" path="res://Audio/Gameproject-horror-ambient.wav" id="15_wluv8"]
 [ext_resource type="Script" uid="uid://cwe2ye3ut5e7x" path="res://Scripts/hotel_lights.gd" id="16_yw43b"]
-[ext_resource type="MeshLibrary" uid="uid://cauglv4j4wbcw" path="res://Assets/maze_mesh.tres" id="21_vsg4k"]
 
 [sub_resource type="Sky" id="Sky_h1tg3"]
 
@@ -49,6 +49,8 @@ size = Vector3(1, 1, 1.73981)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_je6h3"]
 size = Vector3(8.55527, 1.79248, 7.26904)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vsg4k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_frt5s"]
 size = Vector3(1, 2.02722, 1)
@@ -91,6 +93,7 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="Player" parent="." instance=ExtResource("3_h1tg3")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.36566, 1.17318, 11.9237)
+start_flashlight = false
 
 [node name="GridMapWalls_V" type="GridMap" parent="."]
 transform = Transform3D(-0.999994, 0, 0.00338586, 0, 1, 0, -0.00338586, 0, -0.999994, -5.48197, 0, 5.27571)
@@ -129,6 +132,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25163, 2.50599, -22.5676)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueManager/Area_saferoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.564926, -0.39624, -1.98218)
 shape = SubResource("BoxShape3D_je6h3")
+
+[node name="Area_phone" type="Area3D" parent="DialogueManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9722, 1.45332, -4.0861)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueManager/Area_phone"]
+shape = SubResource("BoxShape3D_vsg4k")
 
 [node name="flashlight" parent="." instance=ExtResource("6_je6h3")]
 transform = Transform3D(-1.42929, 0, -1.39898, 0, 2, 0, 1.39898, 0, -1.42929, 4.04135, 2.07324, -23.9233)
@@ -173,11 +182,14 @@ shape = SubResource("BoxShape3D_cpkpc")
 stream = ExtResource("5_cpkpc")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="MusicManager"]
-stream = ExtResource("6_frt5s")
+stream = ExtResource("13_vsg4k")
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="MusicManager"]
-stream = ExtResource("7_fchbp")
-volume_db = -5.621
+stream = ExtResource("14_qmgrn")
+volume_db = -0.936
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="MusicManager"]
+stream = ExtResource("15_wluv8")
 
 [node name="Custodian" parent="." instance=ExtResource("8_cpkpc")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 4.89594, 1.05316, -1.41163)
@@ -365,16 +377,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.804477, 0, 0.51639)
 transform = Transform3D(1.00497, 0, -1.04308e-07, 0, 1, 0, -1.49012e-08, 0, 1.23796, -0.140011, 0.741974, 0.0716534)
 shape = SubResource("BoxShape3D_cbuyl")
 
-[node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("21_vsg4k")
-data = {
-"cells": PackedInt32Array(1, 1, 655360, 0, 1, 655360)
-}
-
 [connection signal="body_entered" from="DialogueManager/AreaCustodian" to="DialogueManager" method="_on_area_custodian_body_entered"]
 [connection signal="body_entered" from="DialogueManager/Areadoor_roomevent" to="DialogueManager" method="_on_areadoor_roomevent_body_entered"]
 [connection signal="body_entered" from="DialogueManager/Area_chase" to="DialogueManager" method="_on_area_chase_body_entered"]
 [connection signal="body_entered" from="DialogueManager/Area_saferoom" to="DialogueManager" method="_on_area_saferoom_body_entered"]
+[connection signal="body_entered" from="DialogueManager/Area_phone" to="DialogueManager" method="_on_area_phone_body_entered"]
 [connection signal="body_entered" from="MusicManager/Area3" to="MusicManager" method="_on_area_3_body_entered"]
 [connection signal="body_entered" from="MusicManager/Area1" to="MusicManager" method="_on_area_1_body_entered"]
 [connection signal="body_entered" from="MusicManager/Area2" to="MusicManager" method="_on_area_2_body_entered"]

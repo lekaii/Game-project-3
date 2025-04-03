@@ -31,3 +31,8 @@ func _on_area_chase_body_entered(body: Node3D) -> void:
 func _on_area_saferoom_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		Dialogic.start("saferoom")
+
+
+func _on_area_phone_body_entered(body: Node3D) -> void:
+	if body.name == "Player" && str(Dialogic.VAR.phonedone).to_lower() == "false":
+		Dialogic.start("phonecall")

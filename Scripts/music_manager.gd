@@ -2,13 +2,15 @@ extends Node
 
 var current_music: AudioStreamPlayer
 @onready var music_lobby = $AudioStreamPlayer1
-@onready var music_rooms = $AudioStreamPlayer2
+@onready var music_rooms1 = $AudioStreamPlayer2
 @onready var music_safe = $AudioStreamPlayer3
+@onready var music_rooms2 = $AudioStreamPlayer4
 
 func _ready():
 	#current_music = 
 	music_lobby.volume_db = -80  # Start at full volume
-	music_rooms.volume_db = -80  # Start muted
+	music_rooms1.volume_db = -80  # Start muted
+	music_rooms2.volume_db = -80  # Start muted
 	music_safe.volume_db = -80  # Start muted
 	#music_lobby.play() could changed to play all at the start if needed to sync
 
@@ -35,7 +37,11 @@ func _on_area_1_body_entered(body: Node3D) -> void:
 
 func _on_area_2_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
-		crossfade_to(music_rooms)
+		if str(Dialogic.VAR.roomsAreSafe).to_lower() == "true":
+			crossfade_to(music_rooms1)
+		else:
+			music_rooms1.stop()
+			crossfade_to(music_rooms2)
 
 
 func _on_area_3_body_entered(body: Node3D) -> void:
