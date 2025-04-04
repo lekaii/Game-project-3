@@ -57,6 +57,7 @@ omni_range = 20.0
 
 [node name="Sprite3D" type="Sprite3D" parent="RotatingPart"]
 transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, 0)
+visible = false
 texture = ExtResource("1_4flbx")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="RotatingPart"]
