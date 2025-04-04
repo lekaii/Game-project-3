@@ -19,8 +19,9 @@ func crossfade_to(new_music: AudioStreamPlayer):
 		return  # No need to crossfade if already playing
 
 	var tween = create_tween()
-	tween.tween_property(current_music, "volume_db", -80, 0.5)  # Fade out, duration 0.5sec
-	tween.tween_property(new_music, "volume_db", 0, 0.5)  # Fade in, duration 05.sec
+	tween.tween_property(new_music, "volume_db", 0, 1.0)  # Fade in, duration 05.sec
+	tween.tween_property(current_music, "volume_db", -80, 1.0)  # Fade out, duration 0.5sec
+	
 	
 	if not new_music.playing:
 		new_music.play()  # If area is entered first time, song is loaded

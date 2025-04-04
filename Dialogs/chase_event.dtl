@@ -1,5 +1,4 @@
 [signal arg="hotel_13"]
-[signal arg="lobby_right"]
 [signal arg="hotel_lights"]
 [signal arg="cantmove"]
 [signal arg="safe_south"]
