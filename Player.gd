@@ -9,7 +9,7 @@ var rayOrigin = Vector3()
 var rayEnd = Vector3()
 var WASDdirection = 0
 
-@onready var flashlight = $RotatingPart
+@onready var flashlight = $RotatingPart/SpotLight3D
 @export var start_flashlight: bool = true  #
 var can_move: bool = true
 
