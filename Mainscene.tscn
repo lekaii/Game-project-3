@@ -48,7 +48,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54909, 0, 7.26662)
 
 [node name="Ghost" parent="." instance=ExtResource("6_eacfm")]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0.99831, 0, 8.56802)
-visible = false
 
 [node name="Ghost2" parent="." instance=ExtResource("6_eacfm")]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 2.65906, 9.53674e-07, 12.9244)

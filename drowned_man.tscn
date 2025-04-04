@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cg6r87uj1fr1q"]
 
-[ext_resource type="Script" uid="uid://diq6r1gm435a8" path="res://ghost.gd" id="1_ah7rg"]
+[ext_resource type="Script" uid="uid://dir7gfa3av4tj" path="res://ghost.gd" id="1_ah7rg"]
 [ext_resource type="PackedScene" uid="uid://ctv4tj3hltep6" path="res://Free 3D Modular Game Assets For Prototyping/Pieces/ground.fbx" id="2_ah7rg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ar2g"]
@@ -11,7 +11,6 @@ height = 25.8153
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_ah7rg")
-movement_speed = 0.4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23255, 14.4975, -0.371868)

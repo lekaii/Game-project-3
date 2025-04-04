@@ -1,13 +1,24 @@
 extends CharacterBody3D
 
-@export var movement_speed : float = 2.0
+@export var max_movement_speed : float = 2.0
 @export var locked_y_position : float = 0.0
 var character_direction : Vector3
+var can_move = false
+var movement_speed = 0.0
+@export var ghostgroup = 0
+
+func _ready():
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _physics_process(delta):
 	character_direction = Globals.player_position-position
 	
 	position.y = locked_y_position
+	
+	if can_move:
+		movement_speed = max_movement_speed
+	else:
+		movement_speed = 0.0
 	
 	if character_direction:
 		character_direction.y = 0
@@ -22,3 +33,10 @@ func _physics_process(delta):
 	rotate_object_local(Vector3.UP, deg_to_rad(0))
 	
 	move_and_slide()
+	
+func _on_dialogic_signal(argument:String):
+	if argument == "StartGhost1" and ghostgroup == 1:
+		$".".visible = true
+		can_move = true
+	elif argument == "KillGhost1" and ghostgroup == 1:
+		$".".queue_free()

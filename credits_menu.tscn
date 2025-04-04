@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4eudydlx6alb"]
+[gd_scene load_steps=4 format=3 uid="uid://c4eudydlx6alb"]
 
 [ext_resource type="Script" uid="uid://pn4anc8o80yv" path="res://credits_menu.gd" id="1_kdv4w"]
 [ext_resource type="Texture2D" uid="uid://dkx04x8rq6p7l" path="res://CreditsBG.png" id="2_tgbea"]
+[ext_resource type="AudioStream" uid="uid://b2kx1qn1d8vmt" path="res://Audio/Gameproject-mainmenu-ambient.wav" id="3_8n0c7"]
 
 [node name="CreditsMenu" type="Control"]
 layout_mode = 3
@@ -74,5 +75,9 @@ text = "Map Assets
 Dialogue stuff
 	Dialogic 2 (Alpha 16)"
 fit_content = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8n0c7")
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

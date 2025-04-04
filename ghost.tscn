@@ -1,22 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://ber13no23304s"]
 
-[ext_resource type="Script" uid="uid://diq6r1gm435a8" path="res://ghost.gd" id="1_6attn"]
+[ext_resource type="Script" uid="uid://dir7gfa3av4tj" path="res://ghost.gd" id="1_6attn"]
 [ext_resource type="PackedScene" uid="uid://bmuvdro3jvgdv" path="res://StaticManCutout.glb" id="4_xtt71"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_obmiq"]
-radius = 0.766177
+radius = 0.159937
 height = 9.91034
 
 [node name="Ghost" type="CharacterBody3D"]
-collision_layer = 2
-collision_mask = 2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.54673, 0)
+collision_layer = 6
+collision_mask = 6
 script = ExtResource("1_6attn")
-movement_speed = 0.5
-locked_y_position = 1.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.53167, 0)
 shape = SubResource("CapsuleShape3D_obmiq")
 
 [node name="StaticManCutout" parent="." instance=ExtResource("4_xtt71")]
-transform = Transform3D(-0.02, 3.45244e-09, 1.29936e-09, -2.62829e-09, -0.0275357, -0.00793816, 2.79093e-10, -0.0119072, 0.0183572, 0, 1.72602, -0.00395863)
+transform = Transform3D(-0.017, 2.67225e-09, 1.10445e-09, -2.12376e-09, -0.0206839, -0.00954854, -1.0687e-10, -0.014042, 0.014065, 0, 1.6728, 0.121439)
