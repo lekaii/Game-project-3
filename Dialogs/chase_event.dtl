@@ -10,13 +10,9 @@ The hotel is now in complete darkness.\
 A loud bang echoes at the end of the hall.
 [sound path="res://Audio/scrape_righttoleft.wav" volume="0.0"]
 Then, you hear something dragging itself toward you.
-[signal arg="spotvisiblee"]
-[signal arg="ghostvisiblee"]
-A cold whisper fills the air. (”You shouldn’t be here...”)\
-A ghostly figure appears in the hallway.
-Suddenly, it lunges at you!
+Suddenly, something lunges at you!
 [sound path="res://Audio/Gameproject-screamer.wav" volume="0.0"]
-[signal arg="ghostinvisiblee"]
+[signal arg="ghostinvisible"]
 [signal arg="StartGhost1"]
 [signal arg="canmove"]
 set {chasestarted} = "true"
