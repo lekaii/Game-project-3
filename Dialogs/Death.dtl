@@ -1,0 +1,4 @@
+[signal arg="KillGhost1"]
+[signal arg="hotel_13"]
+set {chasestarted} = "false"
+You suddenly wake up in your room, dripped in cold sweat.

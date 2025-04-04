@@ -39,12 +39,17 @@ func _on_dialogic_signal(argument:String):
 		$".".visible = true
 		can_move = true
 	elif argument == "KillGhost1" and ghostgroup == 1:
-		$".".queue_free()
+		$".".visible = false
+		can_move = false
+		global_position = get_node("/root/Hotel/GhostSpawn").global_position
 
 
 func _on_killzone_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player"):
-		killPlayer()
+		body.global_position = get_node("/root/Hotel/Checkpoint").global_position
+		Dialogic.start("Death")
+		#killPlayer()
 
-func killPlayer():
-	get_tree().change_scene_to_file("res://Scenes/Hotel.tscn")
+#func killPlayer():
+	#get_tree().change_scene_to_file("res://Scenes/Hotel.tscn")
+	

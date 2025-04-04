@@ -28,6 +28,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Custodian": "res://Dialogs/Custodian.dtl",
+"Death": "res://Dialogs/Death.dtl",
 "area_key": "res://Dialogs/area_key.dtl",
 "area_note": "res://Dialogs/area_note.dtl",
 "chase_event": "res://Dialogs/chase_event.dtl",
