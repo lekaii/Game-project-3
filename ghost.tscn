@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ber13no23304s"]
+[gd_scene load_steps=5 format=3 uid="uid://ber13no23304s"]
 
 [ext_resource type="Script" uid="uid://dir7gfa3av4tj" path="res://ghost.gd" id="1_6attn"]
 [ext_resource type="PackedScene" uid="uid://bmuvdro3jvgdv" path="res://StaticManCutout.glb" id="4_xtt71"]
@@ -6,6 +6,10 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_obmiq"]
 radius = 0.159937
 height = 9.91034
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6attn"]
+height = 2.44873
+radius = 0.0644531
 
 [node name="Ghost" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.54673, 0)
@@ -18,4 +22,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.53167, 0)
 shape = SubResource("CapsuleShape3D_obmiq")
 
 [node name="StaticManCutout" parent="." instance=ExtResource("4_xtt71")]
-transform = Transform3D(-0.017, 2.67225e-09, 1.10445e-09, -2.12376e-09, -0.0206839, -0.00954854, -1.0687e-10, -0.014042, 0.014065, 0, 1.6728, 0.121439)
+transform = Transform3D(-0.017, 2.67225e-09, 1.10445e-09, -2.12201e-09, -0.0221571, -0.0078734, 1.37271e-10, -0.0115786, 0.0150668, 0, 1.6728, 0.121439)
+
+[node name="Killzone" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Killzone"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 1.6731, 0)
+shape = SubResource("CylinderShape3D_6attn")
+
+[connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]

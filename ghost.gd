@@ -40,3 +40,11 @@ func _on_dialogic_signal(argument:String):
 		can_move = true
 	elif argument == "KillGhost1" and ghostgroup == 1:
 		$".".queue_free()
+
+
+func _on_killzone_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Player"):
+		killPlayer()
+
+func killPlayer():
+	get_tree().change_scene_to_file("res://Scenes/Hotel.tscn")

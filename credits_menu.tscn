@@ -41,7 +41,7 @@ layout_mode = 2
 offset_left = 177.0
 offset_top = 96.0
 offset_right = 577.0
-offset_bottom = 496.0
+offset_bottom = 564.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Rafael
 	Project management, Le big boss
@@ -50,10 +50,12 @@ Jolin
 	2D art, 3D art, 3D Animation
 
 Emil
-	Mecanics, Shadows, Lighting, Programming, UI
+	Mecanics, Shadows, Lighting, Programming, 
+	Menu UI, enemies, 3D art
 
 Aleksi
-	Level design, Programming, Level building tools
+	Level design, Programming, Level building tools,
+	Dialogic implementation, Lighting
 
 Kristian
 	Audio
