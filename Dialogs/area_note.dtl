@@ -1,6 +1,8 @@
+[signal arg="cantmove"]
 On a dusty shelf, you find a folded letter with shaky handwriting\:
-"They found out I tried to escape. The others are already gone. I hear the dragging sounds outside my door. But I saw him. The manager. 
+"They found out I tried to escape. The others are already gone. I hear the dragging sounds outside my door. But I saw him. The manager.
 He didn’t use the front door. He touched the frame of the hotel painting in his office… and then he disappeared."
 player: Office? They must mean the safe room...
+[signal arg="canmove"]
 set {paintingkey} = "true"
 [signal arg="area_note_off"]

@@ -1,3 +1,4 @@
+[signal arg="cantmove"]
 You see an old newspaper. Do you want to read it?
 - Yes
 	[background arg="res://Assets/Newspaper.png" fade="0.0"]
@@ -7,3 +8,4 @@ You see an old newspaper. Do you want to read it?
 	Then, you see something even worse.
 	In the background, inside the hotel’s windows, dozens of shadowy faces are staring out.
 - No
+[signal arg="canmove"]

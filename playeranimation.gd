@@ -18,24 +18,31 @@ func _process(_delta):
 		anim_tree.set("parameters/Run/blend_amount", 0.0)
 		anim_tree.set("parameters/Sneak/blend_amount", 0.0)
 		anim_tree.set("parameters/Walk/blend_amount", 0.0)
-	elif Globals.player_is_sprinting:
-		anim_tree.set("parameters/Die/blend_amount", 0.0)
-		anim_tree.set("parameters/Run/blend_amount", 1.0)
-		anim_tree.set("parameters/Sneak/blend_amount", 0.0)
-		anim_tree.set("parameters/Walk/blend_amount", 0.0)
-	elif Globals.player_is_walking:
+	elif !Globals.player_can_move:
+		# No animation while in dialog!
 		anim_tree.set("parameters/Die/blend_amount", 0.0)
 		anim_tree.set("parameters/Run/blend_amount", 0.0)
 		anim_tree.set("parameters/Sneak/blend_amount", 0.0)
-		anim_tree.set("parameters/Walk/blend_amount", 1.0)
-	elif Globals.player_is_sneaking:
-		anim_tree.set("parameters/Die/blend_amount", 0.0)
-		anim_tree.set("parameters/Run/blend_amount", 0.0)
-		anim_tree.set("parameters/Sneak/blend_amount", 1.0)
 		anim_tree.set("parameters/Walk/blend_amount", 0.0)
 	else:
-		anim_tree.set("parameters/Die/blend_amount", 0.0)
-		anim_tree.set("parameters/Run/blend_amount", 0.0)
-		anim_tree.set("parameters/Sneak/blend_amount", 0.0)
-		anim_tree.set("parameters/Walk/blend_amount", 0.0)
+		if Globals.player_is_sprinting:
+			anim_tree.set("parameters/Die/blend_amount", 0.0)
+			anim_tree.set("parameters/Run/blend_amount", 1.0)
+			anim_tree.set("parameters/Sneak/blend_amount", 0.0)
+			anim_tree.set("parameters/Walk/blend_amount", 0.0)
+		elif Globals.player_is_walking:
+			anim_tree.set("parameters/Die/blend_amount", 0.0)
+			anim_tree.set("parameters/Run/blend_amount", 0.0)
+			anim_tree.set("parameters/Sneak/blend_amount", 0.0)
+			anim_tree.set("parameters/Walk/blend_amount", 1.0)
+		elif Globals.player_is_sneaking:
+			anim_tree.set("parameters/Die/blend_amount", 0.0)
+			anim_tree.set("parameters/Run/blend_amount", 0.0)
+			anim_tree.set("parameters/Sneak/blend_amount", 1.0)
+			anim_tree.set("parameters/Walk/blend_amount", 0.0)
+		else:
+			anim_tree.set("parameters/Die/blend_amount", 0.0)
+			anim_tree.set("parameters/Run/blend_amount", 0.0)
+			anim_tree.set("parameters/Sneak/blend_amount", 0.0)
+			anim_tree.set("parameters/Walk/blend_amount", 0.0)
 		

@@ -1,5 +1,6 @@
 [signal arg="cantmove"]
 [signal arg="phoneOff"]
+[signal arg="lobby_right"]
 Slowly, you reach out and lift the receiver to your ear.
 [sound path="res://Audio/Gameproject-phonecall.wav" volume="0.0"]
 A distorted voice whispers\: "Get out now. Or stay—forever."

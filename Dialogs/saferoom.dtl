@@ -1,4 +1,5 @@
 if {saferoomfirst} == "true":
+	[signal arg="cantmove"]
 	[signal arg="spotinvisible"]
 	[signal arg="KillGhost1"]
 	After a desperate chase, you stumble into a hidden room—the Safe Room.
@@ -10,3 +11,4 @@ if {saferoomfirst} == "true":
 	set {intermissiondone} = "true"
 	set {roomsAreSafe} = "false"
 	[signal arg="newspaperglow"]
+	[signal arg="canmove"]
