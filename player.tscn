@@ -67,14 +67,13 @@ shadow_enabled = true
 spot_range = 37.557
 spot_angle = 26.82
 
-[node name="Playerwithfixed2" parent="RotatingPart" instance=ExtResource("5_2hs0m")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-
 [node name="WASDrotation" type="Marker3D" parent="."]
 
 [node name="Player1" parent="WASDrotation" instance=ExtResource("3_hqtel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.963881, -0.256382)
 visible = false
+
+[node name="Playerwithfixed2" parent="WASDrotation" instance=ExtResource("5_2hs0m")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.871343, 0)
