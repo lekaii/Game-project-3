@@ -5,3 +5,4 @@ if {intermissiondone} == "false":
 		player: This isn't my room... What did the receptionist tell me?
 else:
 	[signal arg="hotel_5"]
+	[signal arg="area_diary"]

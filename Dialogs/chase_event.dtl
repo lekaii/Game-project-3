@@ -2,15 +2,10 @@
 [signal arg="hotel_lights"]
 [signal arg="cantmove"]
 [signal arg="safe_south"]
-[sound path="res://Audio/sucked-into-classroom-103774.mp3" volume="0.0"]
-As you step out into the hallway, the lights suddenly go out, and door slams shut behind you!
-[sound path="res://Audio/bang_right.wav" volume="0.0"]
-The hotel is now in complete darkness.\
-A loud bang echoes at the end of the hall.
-[sound path="res://Audio/scrape_righttoleft.wav" volume="0.0"]
-Then, you hear something dragging itself toward you.
-Suddenly, something lunges at you!
+[sound path="res://Audio/Gameproject-shutdown.wav" volume="0.0"]
 [sound path="res://Audio/Gameproject-screamer.wav" volume="0.0"]
+As you step out into the hallway, the lights suddenly go out, and door slams shut behind you!
+Suddenly, something lunges at you!
 [signal arg="ghostinvisible"]
 [signal arg="StartGhost1"]
 [signal arg="canmove"]

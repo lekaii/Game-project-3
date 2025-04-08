@@ -61,3 +61,8 @@ func _on_area_painting_body_entered(body: Node3D) -> void:
 func _on_area_passage_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		Dialogic.start("passage")
+
+
+func _on_area_diary_body_entered(body: Node3D) -> void:
+	if body.name == "Player":
+		Dialogic.start("area_diary")

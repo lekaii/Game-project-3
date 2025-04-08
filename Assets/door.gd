@@ -53,6 +53,13 @@ func _on_hotel_13_area_body_entered(body: Node3D) -> void:
 		prompt_text.visible = true
 		prompt_text2.visible = true
 		player_near = true
+		var room = get_node_or_null("Room 13")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = true
+		
+		
 
 
 func _on_hotel_13_area_body_exited(body: Node3D) -> void:
@@ -60,6 +67,11 @@ func _on_hotel_13_area_body_exited(body: Node3D) -> void:
 		prompt_text.visible = false
 		prompt_text2.visible = false
 		player_near = false
+		var room = get_node_or_null("Room 13")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = false
 
 
 func _on_hotel_6_area_body_entered(body: Node3D) -> void:
@@ -67,6 +79,11 @@ func _on_hotel_6_area_body_entered(body: Node3D) -> void:
 		prompt_text.visible = true
 		prompt_text2.visible = true
 		player_near = true
+		var room = get_node_or_null("Room 5")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = true
 
 
 func _on_hotel_6_area_body_exited(body: Node3D) -> void:
@@ -74,12 +91,22 @@ func _on_hotel_6_area_body_exited(body: Node3D) -> void:
 		prompt_text.visible = false
 		prompt_text2.visible = false
 		player_near = false
+		var room = get_node_or_null("Room 5")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = false
 
 func _on_hotel_5_area_body_entered(body: Node3D) -> void:
 	if body.name == "Player" && !is_open:
 		prompt_text.visible = true
 		prompt_text2.visible = true
 		player_near = true
+		var room = get_node_or_null("Room 4")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = true
 
 
 func _on_hotel_5_area_body_exited(body: Node3D) -> void:
@@ -87,6 +114,11 @@ func _on_hotel_5_area_body_exited(body: Node3D) -> void:
 		prompt_text.visible = false
 		prompt_text2.visible = false
 		player_near = false
+		var room = get_node_or_null("Room 4")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = false
 
 
 func _on_hotel_3_area_body_entered(body: Node3D) -> void:
@@ -94,6 +126,11 @@ func _on_hotel_3_area_body_entered(body: Node3D) -> void:
 		prompt_text.visible = true
 		prompt_text2.visible = true
 		player_near = true
+		var room = get_node_or_null("Room 3")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = true
 
 
 func _on_hotel_3_area_body_exited(body: Node3D) -> void:
@@ -101,6 +138,11 @@ func _on_hotel_3_area_body_exited(body: Node3D) -> void:
 		prompt_text.visible = false
 		prompt_text2.visible = false
 		player_near = false
+		var room = get_node_or_null("Room 3")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = false
 
 
 func _on_hotel_2_area_body_entered(body: Node3D) -> void:
@@ -108,6 +150,11 @@ func _on_hotel_2_area_body_entered(body: Node3D) -> void:
 		prompt_text.visible = true
 		prompt_text2.visible = true
 		player_near = true
+		var room = get_node_or_null("Room 2")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = true
 
 
 func _on_hotel_2_area_body_exited(body: Node3D) -> void:
@@ -115,6 +162,11 @@ func _on_hotel_2_area_body_exited(body: Node3D) -> void:
 		prompt_text.visible = false
 		prompt_text2.visible = false
 		player_near = false
+		var room = get_node_or_null("Room 2")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = false
 
 
 func _on_hotel_4_area_body_entered(body: Node3D) -> void:
@@ -122,6 +174,11 @@ func _on_hotel_4_area_body_entered(body: Node3D) -> void:
 		prompt_text.visible = true
 		prompt_text2.visible = true
 		player_near = true
+		var room = get_node_or_null("Room 6")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = true
 
 
 func _on_hotel_4_area_body_exited(body: Node3D) -> void:
@@ -129,6 +186,11 @@ func _on_hotel_4_area_body_exited(body: Node3D) -> void:
 		prompt_text.visible = false
 		prompt_text2.visible = false
 		player_near = false
+		var room = get_node_or_null("Room 6")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = false
 
 
 func _on_hotel_1_area_body_entered(body: Node3D) -> void:
@@ -136,6 +198,11 @@ func _on_hotel_1_area_body_entered(body: Node3D) -> void:
 		prompt_text.visible = true
 		prompt_text2.visible = true
 		player_near = true
+		var room = get_node_or_null("Room 1")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = true
 
 
 func _on_hotel_1_area_body_exited(body: Node3D) -> void:
@@ -143,3 +210,8 @@ func _on_hotel_1_area_body_exited(body: Node3D) -> void:
 		prompt_text.visible = false
 		prompt_text2.visible = false
 		player_near = false
+		var room = get_node_or_null("Room 1")
+		if room:
+			for child in room.get_children():
+				if child is Label3D:  
+					child.visible = false

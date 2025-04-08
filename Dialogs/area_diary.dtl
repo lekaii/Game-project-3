@@ -1,0 +1,6 @@
+[signal arg="cantmove"]
+You find a hastily scrawled note, left by a guest.
+"I see them. In the mirrors, in the halls, in my dreams. This hotel doesn’t let anyone leave." 
+"But there’s a way. The painting. I saw the manager use it once… The frame moves… but where?"
+[signal arg="canmove"]
+[signal arg="area_diary_off"]

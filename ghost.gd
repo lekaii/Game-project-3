@@ -39,9 +39,10 @@ func _on_dialogic_signal(argument:String):
 		$".".visible = true
 		can_move = true
 	elif argument == "KillGhost1" and ghostgroup == 1:
-		$".".visible = false
-		can_move = false
-		global_position = get_node("/root/Hotel/GhostSpawn").global_position
+		queue_free()
+		#$".".visible = false
+		#can_move = false
+		#global_position = get_node("/root/Hotel/GhostSpawn").global_position
 
 
 func _on_killzone_body_entered(body: Node3D) -> void:

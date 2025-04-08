@@ -110,3 +110,87 @@ text = "Press E to open"
 transform = Transform3D(0.0163963, 0.481601, -0.876237, -0.0090102, 0.876391, 0.481516, 0.999825, -5.55112e-17, 0.0187089, -0.311955, 2.05398, 0.469536)
 visible = false
 text = "Press E to open"
+
+[node name="Room 1" type="Node3D" parent="."]
+
+[node name="Label3D3" type="Label3D" parent="Room 1"]
+transform = Transform3D(0.0337367, -0.861032, 0.635668, 0.0408735, 0.710689, 0.770141, -0.998595, 0, 0.0529982, 0.481196, 1.95346, 0.404404)
+visible = false
+text = "Room 1"
+
+[node name="Label3D4" type="Label3D" parent="Room 1"]
+transform = Transform3D(0.0163963, 0.481601, -0.876237, -0.0090102, 0.876391, 0.481516, 0.999825, -5.55112e-17, 0.0187089, -0.491537, 1.83674, 0.469536)
+visible = false
+text = "Room 1"
+
+[node name="Room 2" type="Node3D" parent="."]
+
+[node name="Label3D3" type="Label3D" parent="Room 2"]
+transform = Transform3D(0.0337367, -0.861032, 0.635668, 0.0408735, 0.710689, 0.770141, -0.998595, 0, 0.0529982, 0.481196, 1.95346, 0.404404)
+visible = false
+text = "Room 2"
+
+[node name="Label3D4" type="Label3D" parent="Room 2"]
+transform = Transform3D(0.0163963, 0.481601, -0.876237, -0.0090102, 0.876391, 0.481516, 0.999825, -5.55112e-17, 0.0187089, -0.491537, 1.83674, 0.469536)
+visible = false
+text = "Room 2"
+
+[node name="Room 3" type="Node3D" parent="."]
+
+[node name="Label3D3" type="Label3D" parent="Room 3"]
+transform = Transform3D(0.0337367, -0.861032, 0.635668, 0.0408735, 0.710689, 0.770141, -0.998595, 0, 0.0529982, 0.481196, 1.95346, 0.404404)
+visible = false
+text = "Room 3"
+
+[node name="Label3D4" type="Label3D" parent="Room 3"]
+transform = Transform3D(0.0163963, 0.481601, -0.876237, -0.0090102, 0.876391, 0.481516, 0.999825, -5.55112e-17, 0.0187089, -0.491537, 1.83674, 0.469536)
+visible = false
+text = "Room 3"
+
+[node name="Room 4" type="Node3D" parent="."]
+
+[node name="Label3D3" type="Label3D" parent="Room 4"]
+transform = Transform3D(0.0337367, -0.861032, 0.635668, 0.0408735, 0.710689, 0.770141, -0.998595, 0, 0.0529982, 0.481196, 1.95346, 0.404404)
+visible = false
+text = "Room 4"
+
+[node name="Label3D4" type="Label3D" parent="Room 4"]
+transform = Transform3D(0.0163963, 0.481601, -0.876237, -0.0090102, 0.876391, 0.481516, 0.999825, -5.55112e-17, 0.0187089, -0.491537, 1.83674, 0.469536)
+visible = false
+text = "Room 4"
+
+[node name="Room 5" type="Node3D" parent="."]
+
+[node name="Label3D3" type="Label3D" parent="Room 5"]
+transform = Transform3D(0.0337367, -0.861032, 0.635668, 0.0408735, 0.710689, 0.770141, -0.998595, 0, 0.0529982, 0.481196, 1.95346, 0.404404)
+visible = false
+text = "Room 5"
+
+[node name="Label3D4" type="Label3D" parent="Room 5"]
+transform = Transform3D(0.0163963, 0.481601, -0.876237, -0.0090102, 0.876391, 0.481516, 0.999825, -5.55112e-17, 0.0187089, -0.491537, 1.83674, 0.469536)
+visible = false
+text = "Room 5"
+
+[node name="Room 6" type="Node3D" parent="."]
+
+[node name="Label3D3" type="Label3D" parent="Room 6"]
+transform = Transform3D(0.0337367, -0.861032, 0.635668, 0.0408735, 0.710689, 0.770141, -0.998595, 0, 0.0529982, 0.481196, 1.95346, 0.404404)
+visible = false
+text = "Employee break room"
+
+[node name="Label3D4" type="Label3D" parent="Room 6"]
+transform = Transform3D(0.0163963, 0.481601, -0.876237, -0.0090102, 0.876391, 0.481516, 0.999825, -5.55112e-17, 0.0187089, -0.491537, 1.83674, 0.469536)
+visible = false
+text = "Employee break room"
+
+[node name="Room 13" type="Node3D" parent="."]
+
+[node name="Label3D3" type="Label3D" parent="Room 13"]
+transform = Transform3D(0.0337367, -0.861032, 0.635668, 0.0408735, 0.710689, 0.770141, -0.998595, 0, 0.0529982, 0.481196, 1.95346, 0.404404)
+visible = false
+text = "Room 13"
+
+[node name="Label3D4" type="Label3D" parent="Room 13"]
+transform = Transform3D(0.0163963, 0.481601, -0.876237, -0.0090102, 0.876391, 0.481516, 0.999825, -5.55112e-17, 0.0187089, -0.491537, 1.83674, 0.469536)
+visible = false
+text = "Room 13"

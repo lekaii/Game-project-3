@@ -1,3 +1,4 @@
+[style name="default"]
 if {introdone} == "false":
 	[signal arg="cantmove"]
 	You see The receptionist, an old man with pale skin and hollow eyes, standing behind the counter. His suit looks neat but a little worn out.

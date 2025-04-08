@@ -5,9 +5,13 @@ var current_music: AudioStreamPlayer
 @onready var music_rooms1 = $AudioStreamPlayer2
 @onready var music_safe = $AudioStreamPlayer3
 @onready var music_rooms2 = $AudioStreamPlayer4
+@onready var music_outside = $AudioStreamPlayer5
+
+var paused_positions = {}
 
 func _ready():
-	#current_music = 
+	current_music = music_outside
+	music_outside.play()
 	music_lobby.volume_db = -80  # Start at full volume
 	music_rooms1.volume_db = -80  # Start muted
 	music_rooms2.volume_db = -80  # Start muted
@@ -23,11 +27,20 @@ func crossfade_to(new_music: AudioStreamPlayer):
 	tween.tween_property(current_music, "volume_db", -80, 1.0)  # Fade out, duration 0.5sec
 	
 	
-	if not new_music.playing:
-		new_music.play()  # If area is entered first time, song is loaded
+	if new_music in paused_positions:
+		new_music.play(paused_positions[new_music])
+	else:
+		new_music.play()
 	
 	#await tween.finished  # Wait fade-out to compl
+	var old_music = current_music
 	current_music = new_music
+	
+	tween.connect("finished", func():
+		if old_music != new_music:
+			paused_positions[old_music] = old_music.get_playback_position()
+			old_music.stop()
+	)
 
 # Create these for new areas as needed
 
@@ -48,3 +61,8 @@ func _on_area_2_body_entered(body: Node3D) -> void:
 func _on_area_3_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		crossfade_to(music_safe)
+
+
+func _on_area_0_body_entered(body: Node3D) -> void:
+	if body.name == "Player":
+		crossfade_to(music_outside)
