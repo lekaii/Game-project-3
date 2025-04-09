@@ -12,3 +12,18 @@ if {saferoomfirst} == "true":
 	set {roomsAreSafe} = "false"
 	[signal arg="newspaperglow"]
 	[signal arg="canmove"]
+if {ghost2} == "true":
+	[signal arg="KillGhost2"]
+	You feel your pursuers fading away...
+	set {ghost2} = "false"
+	set {ghost2dead} = "true"
+if {ghost3} == "true":
+	[signal arg="KillGhost3"]
+	You feel your pursuers fading away...
+	set {ghost3} = "false"
+	set {ghost3dead} = "true"
+if {ghost4} == "true":
+	[signal arg="KillGhost4"]
+	You feel your pursuers fading away...
+	set {ghost4} = "false"
+	set {ghost4dead} = "true"

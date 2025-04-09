@@ -10,5 +10,6 @@ var player_is_walking: bool = false
 var player_is_sneaking: bool = false
 var player_is_idle: bool = true
 
+var darkness: float = 0.3
 
 var flashlight_aquired: bool = true

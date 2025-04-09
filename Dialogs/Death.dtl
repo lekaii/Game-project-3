@@ -1,3 +1,20 @@
-[signal arg="KillGhost1"]
-[signal arg="hotel_13"]
-You suddenly wake up in your room, dripped in cold sweat.
+if {intermissiondone} == "false":
+	[signal arg="KillGhost1"]
+	[signal arg="hotel_13"]
+	You suddenly wake up in your room, dripped in cold sweat.
+else:
+	if {ghost2} == "true":
+		[signal arg="KillGhost2"]
+		set {ghost2} = "false"
+		set {ghost2dead} = "true"
+		You suddenly wake up in the safe room.
+	if {ghost3} == "true":
+		[signal arg="KillGhost3"]
+		set {ghost3} = "false"
+		set {ghost3dead} = "true"
+		You suddenly wake up in the safe room.
+	if {ghost4} == "true":
+		[signal arg="KillGhost4"]
+		set {ghost4} = "false"
+		set {ghost4dead} = "true"
+		You suddenly wake up in the safe room.

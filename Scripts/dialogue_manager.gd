@@ -66,3 +66,18 @@ func _on_area_passage_body_entered(body: Node3D) -> void:
 func _on_area_diary_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		Dialogic.start("area_diary")
+
+
+func _on_area_ghost_2_body_entered(body: Node3D) -> void:
+	if body.name == "Player" && str(Dialogic.VAR.ghost2).to_lower() == "false" && str(Dialogic.VAR.ghost2dead).to_lower() == "false":
+		Dialogic.start("ghost2")
+
+
+func _on_area_ghost_3_body_entered(body: Node3D) -> void:
+	if body.name == "Player" && str(Dialogic.VAR.ghost3).to_lower() == "false" && str(Dialogic.VAR.ghost3dead).to_lower() == "false":
+		Dialogic.start("ghost3")
+
+
+func _on_area_ghost_4_body_entered(body: Node3D) -> void:
+	if body.name == "Player" && str(Dialogic.VAR.ghost4).to_lower() == "false" && str(Dialogic.VAR.ghost4dead).to_lower() == "false":
+		Dialogic.start("ghost4")

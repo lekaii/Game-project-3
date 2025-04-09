@@ -1,6 +1,7 @@
-[gd_scene load_steps=66 format=4 uid="uid://cjchv2lh22rm6"]
+[gd_scene load_steps=68 format=4 uid="uid://cjchv2lh22rm6"]
 
 [ext_resource type="MeshLibrary" uid="uid://cw7bnqf6jsdim" path="res://Assets/floor_gridmap.tres" id="1_evk5m"]
+[ext_resource type="Script" uid="uid://djy8ehn75d27t" path="res://Scripts/world_environment.gd" id="1_qluhf"]
 [ext_resource type="MeshLibrary" uid="uid://b7hqef6gwj0fq" path="res://Assets/wall_gridmap.tres" id="2_h1tg3"]
 [ext_resource type="PackedScene" uid="uid://b4mheb7veolmm" path="res://player.tscn" id="3_h1tg3"]
 [ext_resource type="Script" uid="uid://bldu3v7735k5s" path="res://Scripts/dialogue_manager.gd" id="4_fchbp"]
@@ -23,15 +24,15 @@
 [ext_resource type="Script" uid="uid://b34nuyg4qs7oe" path="res://Scripts/ghost_manager.gd" id="11_qmgrn"]
 [ext_resource type="Script" uid="uid://dtuilgx87t2wp" path="res://Assets/door.gd" id="12_cbuyl"]
 [ext_resource type="MeshLibrary" uid="uid://c6a04qd4dndlu" path="res://Assets/furniture_mesh.tres" id="13_7sibf"]
-[ext_resource type="AudioStream" uid="uid://c6ly686ujpjhw" path="res://Audio/Gameproject-hallway-ambient.wav" id="13_vsg4k"]
 [ext_resource type="AudioStream" uid="uid://ccttu6a1fe36" path="res://Audio/Gameproject-saferoom-music-FINAL-mp3.mp3" id="14_qmgrn"]
 [ext_resource type="Script" uid="uid://cfx8xxky3dl77" path="res://Scenes/room_13_light.gd" id="15_7xva1"]
-[ext_resource type="AudioStream" uid="uid://oawajwgghfib" path="res://Audio/Gameproject-horror-ambient.wav" id="15_wluv8"]
 [ext_resource type="Script" uid="uid://cwe2ye3ut5e7x" path="res://Scripts/hotel_lights.gd" id="16_yw43b"]
 [ext_resource type="PackedScene" uid="uid://bpd6nuey740ma" path="res://ghost_event.tscn" id="18_qmgrn"]
 [ext_resource type="PackedScene" uid="uid://dqk1onnl7q61h" path="res://Assets/ghost_spot.tscn" id="20_wluv8"]
+[ext_resource type="AudioStream" uid="uid://dipvmude8c7no" path="res://Audio/Gameproject-hallway-ambient-FINAL.wav" id="21_dj6kq"]
 [ext_resource type="Script" uid="uid://dk8401hmk7wcy" path="res://Scripts/ghost_spot.gd" id="21_gp8nt"]
-[ext_resource type="AudioStream" uid="uid://cxfjxadvc2gns" path="res://Audio/Gameproject-outside.wav" id="23_xxy6u"]
+[ext_resource type="AudioStream" uid="uid://td3x0tmo40bb" path="res://Audio/Gameproject-horror-ambient-FINAL.wav" id="23_qluhf"]
+[ext_resource type="AudioStream" uid="uid://dawdugyl6x8sq" path="res://Audio/Gameproject-outside_FINAL.wav" id="24_1s80p"]
 [ext_resource type="AudioStream" uid="uid://bqyyerv7vb57n" path="res://Audio/Gameproject-wind.wav" id="24_7nkg2"]
 [ext_resource type="Script" uid="uid://h5wreq4lj30q" path="res://Scripts/custodian.gd" id="26_cgdtw"]
 [ext_resource type="PackedScene" uid="uid://ber13no23304s" path="res://ghost.tscn" id="31_uhhev"]
@@ -64,7 +65,7 @@ size = Vector3(6.1042, 1, 1.37891)
 size = Vector3(1, 1, 1.73981)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_je6h3"]
-size = Vector3(8.55527, 1.79248, 7.26904)
+size = Vector3(8.55527, 1.79248, 2.44494)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vsg4k"]
 
@@ -78,6 +79,8 @@ size = Vector3(8.55527, 1.79248, 7.26904)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xxy6u"]
 size = Vector3(2.62744, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qluhf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ysfmw"]
 resource_name = "Painting"
@@ -196,6 +199,7 @@ size = Vector3(11.039, 2.01709, 8.72113)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_h1tg3")
+script = ExtResource("1_qluhf")
 
 [node name="GridMapFloor" type="GridMap" parent="."]
 transform = Transform3D(-0.00165801, 0, -0.999999, 0, 1, 0, 0.999999, 0, -0.00165801, 3.60291, 0, 1.28792)
@@ -259,7 +263,7 @@ shape = SubResource("BoxShape3D_sjb41")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25163, 2.50599, -22.5676)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueManager/Area_saferoom"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.564926, -0.39624, -1.98218)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.564926, -0.39624, 0.429869)
 shape = SubResource("BoxShape3D_je6h3")
 
 [node name="Area_phone" type="Area3D" parent="DialogueManager"]
@@ -299,15 +303,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.627907, 0.895038, 0)
 visible = false
 
 [node name="Area_diary" type="Area3D" parent="DialogueManager"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5949, 1.29171, -19.8207)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.14562, 1.29171, -16.4342)
 script = ExtResource("9_dj6kq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueManager/Area_diary"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107059, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.628653, 0, 0.345963)
 shape = SubResource("BoxShape3D_uhhev")
 
 [node name="InteractGlow" parent="DialogueManager/Area_diary" instance=ExtResource("6_5uiho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.101071, 0.895038, -0.287184)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.408247, 0.773188, 0.445252)
 visible = false
 
 [node name="Area_painting" type="Area3D" parent="DialogueManager"]
@@ -323,6 +327,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.85402, 0.640651, -29.5574)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueManager/Area_passage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86416, 0.694188, 0)
 shape = SubResource("BoxShape3D_xxy6u")
+
+[node name="Area_ghost2" type="Area3D" parent="DialogueManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5007, 0, -14.2889)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueManager/Area_ghost2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07231, 0.849389)
+shape = SubResource("BoxShape3D_qluhf")
+
+[node name="Area_ghost3" type="Area3D" parent="DialogueManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.304387, 0, -14.2889)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueManager/Area_ghost3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.39696, 1.07231, 0.849389)
+shape = SubResource("BoxShape3D_qluhf")
+
+[node name="Area_ghost4" type="Area3D" parent="DialogueManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.66278, 0, -7.85613)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueManager/Area_ghost4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22031, 1.07231, -0.0413027)
+shape = SubResource("BoxShape3D_qluhf")
 
 [node name="CollectManager" type="Node" parent="."]
 
@@ -428,17 +453,17 @@ shape = SubResource("BoxShape3D_cpkpc")
 stream = ExtResource("5_cpkpc")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="MusicManager"]
-stream = ExtResource("13_vsg4k")
+stream = ExtResource("21_dj6kq")
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="MusicManager"]
 stream = ExtResource("14_qmgrn")
 volume_db = -0.936
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="MusicManager"]
-stream = ExtResource("15_wluv8")
+stream = ExtResource("23_qluhf")
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="MusicManager"]
-stream = ExtResource("23_xxy6u")
+stream = ExtResource("24_1s80p")
 
 [node name="Window_audio" type="Node3D" parent="MusicManager"]
 
@@ -733,6 +758,81 @@ transform = Transform3D(-0.386598, 0, -0.922248, 0, 1, 0, 0.922248, 0, -0.386598
 max_movement_speed = 1.5
 ghostgroup = 1
 
+[node name="Ghost6_2" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9989, 0, -21.4165)
+max_movement_speed = 1.0
+ghostgroup = 2
+
+[node name="Ghost7_2" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2225, 0, -21.3348)
+max_movement_speed = 1.5
+ghostgroup = 2
+
+[node name="Ghost8_2" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(-0.386598, 0, -0.922248, 0, 1, 0, 0.922248, 0, -0.386598, 16.5749, 0, -22.0324)
+max_movement_speed = 1.5
+ghostgroup = 2
+
+[node name="Ghost9_2" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(-0.999996, 0, 0.00282731, 0, 1, 0, -0.00282731, 0, -0.999996, 17.7588, 0, -21.8676)
+max_movement_speed = 1.5
+ghostgroup = 2
+
+[node name="Ghost10_2" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(-0.386598, 0, -0.922248, 0, 1, 0, 0.922248, 0, -0.386598, 16.2813, 0, -22.7007)
+max_movement_speed = 1.5
+ghostgroup = 2
+
+[node name="Ghost11" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.707784, 0, -19.8031)
+max_movement_speed = 1.0
+ghostgroup = 3
+
+[node name="Ghost12" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51577, 0, -19.2476)
+max_movement_speed = 1.5
+ghostgroup = 3
+
+[node name="Ghost13" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(-0.386598, 0, -0.922248, 0, 1, 0, 0.922248, 0, -0.386598, -1.13183, 0, -19.9452)
+max_movement_speed = 1.5
+ghostgroup = 3
+
+[node name="Ghost14" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(-0.999996, 0, 0.00282731, 0, 1, 0, -0.00282731, 0, -0.999996, 0.0520713, 0, -19.7804)
+max_movement_speed = 1.5
+ghostgroup = 3
+
+[node name="Ghost15_3" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(-0.386598, 0, -0.922248, 0, 1, 0, 0.922248, 0, -0.386598, -1.42543, 0, -20.6135)
+max_movement_speed = 1.5
+ghostgroup = 3
+
+[node name="Ghost16_4" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.85834, 0, -3.51703)
+max_movement_speed = 1.0
+ghostgroup = 4
+
+[node name="Ghost17" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.63478, 0, -2.96145)
+max_movement_speed = 1.5
+ghostgroup = 4
+
+[node name="Ghost18" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(-0.386598, 0, -0.922248, 0, 1, 0, 0.922248, 0, -0.386598, -8.28238, 0, -3.65906)
+max_movement_speed = 1.5
+ghostgroup = 4
+
+[node name="Ghost19" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(-0.999996, 0, 0.00282731, 0, 1, 0, -0.00282731, 0, -0.999996, -7.09848, 0, -3.49426)
+max_movement_speed = 1.5
+ghostgroup = 4
+
+[node name="Ghost20" parent="." instance=ExtResource("31_uhhev")]
+transform = Transform3D(-0.386598, 0, -0.922248, 0, 1, 0, 0.922248, 0, -0.386598, -8.57598, 0, -4.32737)
+max_movement_speed = 1.5
+ghostgroup = 4
+
 [node name="tree" parent="." instance=ExtResource("32_p4rme")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.0192003, 1.03369, 9.62284)
 
@@ -757,6 +857,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9117, 1.43123, -11.1443)
 [node name="Checkpoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3979, 1.14366, -5.88679)
 
+[node name="Checkpoint_Safe" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.60879, 1.14366, -27.3037)
+
 [connection signal="body_entered" from="DialogueManager/AreaCustodian" to="DialogueManager" method="_on_area_custodian_body_entered"]
 [connection signal="body_entered" from="DialogueManager/Areadoor_roomevent" to="DialogueManager" method="_on_areadoor_roomevent_body_entered"]
 [connection signal="body_entered" from="DialogueManager/Area_chase" to="DialogueManager" method="_on_area_chase_body_entered"]
@@ -768,6 +871,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3979, 1.14366, -5.88679)
 [connection signal="body_entered" from="DialogueManager/Area_diary" to="DialogueManager" method="_on_area_diary_body_entered"]
 [connection signal="body_entered" from="DialogueManager/Area_painting" to="DialogueManager" method="_on_area_painting_body_entered"]
 [connection signal="body_entered" from="DialogueManager/Area_passage" to="DialogueManager" method="_on_area_passage_body_entered"]
+[connection signal="body_entered" from="DialogueManager/Area_ghost2" to="DialogueManager" method="_on_area_ghost_2_body_entered"]
+[connection signal="body_entered" from="DialogueManager/Area_ghost3" to="DialogueManager" method="_on_area_ghost_3_body_entered"]
+[connection signal="body_entered" from="DialogueManager/Area_ghost4" to="DialogueManager" method="_on_area_ghost_4_body_entered"]
 [connection signal="body_entered" from="MusicManager/Area0" to="MusicManager" method="_on_area_0_body_entered"]
 [connection signal="body_entered" from="MusicManager/Area3" to="MusicManager" method="_on_area_3_body_entered"]
 [connection signal="body_entered" from="MusicManager/Area1" to="MusicManager" method="_on_area_1_body_entered"]

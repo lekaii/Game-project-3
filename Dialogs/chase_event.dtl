@@ -1,10 +1,10 @@
 [signal arg="hotel_13"]
-[signal arg="hotel_lights"]
 [signal arg="cantmove"]
 [signal arg="safe_south"]
-[sound path="res://Audio/Gameproject-shutdown.wav" volume="0.0"]
-[sound path="res://Audio/Gameproject-screamer.wav" volume="0.0"]
-As you step out into the hallway, the lights suddenly go out, and door slams shut behind you!
+As you step out into the hallway, door slams shut behind you!
+[sound path="res://Audio/Gameproject-new-screamer.wav" volume="0.0"]
+[wait time="7.0"]
+[signal arg="hotel_lights"]
 Suddenly, something lunges at you!
 [signal arg="ghostinvisible"]
 [signal arg="StartGhost1"]

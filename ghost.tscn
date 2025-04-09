@@ -34,6 +34,8 @@ shape = SubResource("CylinderShape3D_6attn")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_xtt71")
+volume_db = -6.095
+unit_size = 2.39
 script = ExtResource("4_kjq22")
 
 [connection signal="body_entered" from="Killzone" to="." method="_on_killzone_body_entered"]

@@ -10,7 +10,7 @@ func _on_dialogic_signal(argument:String):
 	if argument == "painting_open":
 		move_door()
 	if argument == "movetomaze":
-		get_tree().change_scene_to_file("res://main_menu.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Maze.tscn")
 
 
 # opens or closes the door, plays sound

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvby0sxshc5rb"]
+[gd_scene load_steps=5 format=3 uid="uid://cvby0sxshc5rb"]
 
 [ext_resource type="Script" uid="uid://bhds7au7oyefp" path="res://options_menu.gd" id="1_lbr8e"]
 [ext_resource type="Texture2D" uid="uid://be7sc3117o5nd" path="res://Optionsscreen.png" id="2_t1lix"]
 [ext_resource type="AudioStream" uid="uid://b2kx1qn1d8vmt" path="res://Audio/Gameproject-mainmenu-ambient.wav" id="3_4gmlt"]
+[ext_resource type="Script" uid="uid://h7itc8mot8jv" path="res://Scripts/setting_Slidersgd.gd" id="3_ogda5"]
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -31,6 +32,7 @@ offset_bottom = 500.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+script = ExtResource("3_ogda5")
 
 [node name="Volume" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -47,6 +49,17 @@ text = "Back"
 [node name="DevLevel" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "DevLevel"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "testtt"
+
+[node name="VSlider" type="HSlider" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 15)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
 
 [node name="TextEdit" type="TextEdit" parent="."]
 layout_mode = 0

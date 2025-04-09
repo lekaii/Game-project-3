@@ -12,7 +12,7 @@ var paused_positions = {}
 func _ready():
 	current_music = music_outside
 	music_outside.play()
-	music_lobby.volume_db = -80  # Start at full volume
+	music_lobby.volume_db = -80  # Start muted
 	music_rooms1.volume_db = -80  # Start muted
 	music_rooms2.volume_db = -80  # Start muted
 	music_safe.volume_db = -80  # Start muted
@@ -32,7 +32,6 @@ func crossfade_to(new_music: AudioStreamPlayer):
 	else:
 		new_music.play()
 	
-	#await tween.finished  # Wait fade-out to compl
 	var old_music = current_music
 	current_music = new_music
 	

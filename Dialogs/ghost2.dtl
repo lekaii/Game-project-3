@@ -1,0 +1,5 @@
+set {ghost2} = "true"
+[signal arg="cantmove"]
+Someone is here with you...
+[signal arg="canmove"]
+[signal arg="StartGhost2"]
