@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://rubebjqrw00d"]
+[gd_scene load_steps=4 format=3 uid="uid://rubebjqrw00d"]
 
 [ext_resource type="VideoStream" uid="uid://c557t4h7nbl08" path="res://Assets/Ending.ogv" id="1_sbbak"]
 [ext_resource type="Script" uid="uid://ediuh43wu4qi" path="res://Scripts/ending.gd" id="2_j7kmc"]
+[ext_resource type="AudioStream" uid="uid://pjcptj6bq77f" path="res://Audio/ES_House of Horror - Experia.wav" id="3_gfgbn"]
 
 [node name="Ending" type="Node2D"]
 script = ExtResource("2_j7kmc")
@@ -67,5 +68,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "The Nightveil Hotel is still waiting."
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gfgbn")
+autoplay = true
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
