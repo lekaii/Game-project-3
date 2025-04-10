@@ -44,7 +44,6 @@ layout_mode = 2
 button_mask = 0
 text = "Brightness"
 
-<<<<<<< Updated upstream
 [node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Back"
@@ -61,8 +60,6 @@ text = "Maze"
 layout_mode = 2
 text = "Ending"
 
-=======
->>>>>>> Stashed changes
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -73,14 +70,6 @@ custom_minimum_size = Vector2(100, 15)
 layout_mode = 2
 max_value = 1.0
 step = 0.01
-
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Back"
-
-[node name="DevLevel" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "DevLevel"
 
 [node name="TextEdit" type="TextEdit" parent="."]
 visible = false

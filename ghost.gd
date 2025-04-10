@@ -80,22 +80,19 @@ func _on_killzone_body_entered(body: Node3D) -> void:
 			
 			#killPlayer()
 		elif body.is_in_group("Player") && str(Dialogic.VAR.intermissiondone).to_lower() == "true":
-<<<<<<< Updated upstream
-			body.global_position = get_node("/root/Hotel/Checkpoint_Safe").global_position
-			Dialogic.start("Death")
+			Globals.player_is_dead = true
+			Globals.player_can_move = false
+			$Timer2.start()
 	elif body.is_in_group("Player") && str(Dialogic.VAR.maze).to_lower() == "true":
+		#implement new timer3 here
 		body.global_position = get_node("/root/Maze/Checkpoint_Maze").global_position
 		Dialogic.start("Death_maze")
 
 #func killPlayer():
 	#get_tree().change_scene_to_file("res://Scenes/Hotel.tscn")
-=======
-			Globals.player_is_dead = true
-			Globals.player_can_move = false
-			$Timer2.start()
 			
 			
->>>>>>> Stashed changes
+			
 	
 func _on_timer_timeout() -> void:
 	Globals.player_is_dead = false
