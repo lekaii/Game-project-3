@@ -2,9 +2,7 @@
 You see an old newspaper. Do you want to read it?
 - Yes
 	[background arg="res://Assets/Newspaper.png" fade="0.0"]
-	[style name="emptystyle"]
 	[wait_input]
-	[style name="default"]
 	player: Huh... That's over 100 years old! This hotel shouldn’t exist anymore!
 	player: Wait... That old man at the reception is in the picture!
 	Then, you see something even worse.
