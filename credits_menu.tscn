@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4eudydlx6alb"]
 
 [ext_resource type="Script" uid="uid://pn4anc8o80yv" path="res://credits_menu.gd" id="1_kdv4w"]
-[ext_resource type="Texture2D" uid="uid://dkx04x8rq6p7l" path="res://CreditsBG.png" id="2_tgbea"]
+[ext_resource type="Texture2D" uid="uid://otvjlh8omnpx" path="res://Assets/CreditsBG.png" id="2_8n0c7"]
 [ext_resource type="AudioStream" uid="uid://b2kx1qn1d8vmt" path="res://Audio/Gameproject-mainmenu-ambient.wav" id="3_8n0c7"]
 
 [node name="CreditsMenu" type="Control"]
@@ -15,12 +15,12 @@ script = ExtResource("1_kdv4w")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 53.0
-offset_top = 55.0
-offset_right = 5392.0
-offset_bottom = 2795.0
+offset_left = -2.0
+offset_top = -4.0
+offset_right = 5798.0
+offset_bottom = 3271.0
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_tgbea")
+texture = ExtResource("2_8n0c7")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -42,7 +42,9 @@ offset_left = 177.0
 offset_top = 96.0
 offset_right = 577.0
 offset_bottom = 564.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "Rafael
 	Project management, Le big boss
 
@@ -70,7 +72,7 @@ offset_left = 605.0
 offset_top = 98.0
 offset_right = 1005.0
 offset_bottom = 498.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 text = "Map Assets
 	Kenney.nl
 

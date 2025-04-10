@@ -34,7 +34,7 @@ func _on_dialogic_signal(argument:String):
 
 
 func _physics_process(delta):
-	if not can_move:
+	if not can_move or not Globals.player_can_move:
 		velocity = Vector3.ZERO
 		#move_and_slide() 
 	else:  # cant move, leaving this process

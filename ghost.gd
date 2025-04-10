@@ -7,6 +7,7 @@ var can_move = false
 var movement_speed = 0.0
 @export var ghostgroup = 0
 
+
 func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
@@ -73,10 +74,13 @@ func _on_dialogic_signal(argument:String):
 func _on_killzone_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player") && str(Dialogic.VAR.maze).to_lower() == "false":
 		if body.is_in_group("Player") && str(Dialogic.VAR.intermissiondone).to_lower() == "false":
-			body.global_position = get_node("/root/Hotel/Checkpoint").global_position
-			Dialogic.start("Death")
+			Globals.player_is_dead = true
+			Globals.player_can_move = false
+			$Timer.start()
+			
 			#killPlayer()
 		elif body.is_in_group("Player") && str(Dialogic.VAR.intermissiondone).to_lower() == "true":
+<<<<<<< Updated upstream
 			body.global_position = get_node("/root/Hotel/Checkpoint_Safe").global_position
 			Dialogic.start("Death")
 	elif body.is_in_group("Player") && str(Dialogic.VAR.maze).to_lower() == "true":
@@ -85,4 +89,35 @@ func _on_killzone_body_entered(body: Node3D) -> void:
 
 #func killPlayer():
 	#get_tree().change_scene_to_file("res://Scenes/Hotel.tscn")
+=======
+			Globals.player_is_dead = true
+			Globals.player_can_move = false
+			$Timer2.start()
+			
+			
+>>>>>>> Stashed changes
 	
+func _on_timer_timeout() -> void:
+	Globals.player_is_dead = false
+	Globals.player_can_move = true
+	var player = get_node("/root/Hotel/Player")  # Adjust path to your player node
+	
+	var checkpoint = get_node("/root/Hotel/Checkpoint")
+	
+	if player and checkpoint:
+		player.global_position = checkpoint.global_position
+	
+	Dialogic.start("Death")
+
+
+func _on_timer_2_timeout() -> void:
+	Globals.player_is_dead = false
+	Globals.player_can_move = true
+	var player = get_node("/root/Hotel/Player")  # Adjust path to your player node
+	
+	var checkpoint = get_node("/root/Hotel/Checkpoint_Safe")
+	
+	if player and checkpoint:
+		player.global_position = checkpoint.global_position
+	
+	Dialogic.start("Death")

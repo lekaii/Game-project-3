@@ -9,7 +9,12 @@ func _ready():
 	
 	# Set ALL animations to loop (one-time setup)
 	for anim in anim_player.get_animation_list():
-		anim_player.get_animation(anim).loop_mode = Animation.LOOP_LINEAR
+		print(anim)
+		if anim == "Armature_001|mixamo_com|Layer0_001":
+			anim_player.get_animation(anim).loop_mode = Animation.LOOP_NONE
+		else:
+			anim_player.get_animation(anim).loop_mode = Animation.LOOP_LINEAR
+	
 
 func _process(_delta):
 	# Simple state machine using your Globals
