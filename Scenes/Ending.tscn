@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://rubebjqrw00d"]
+
+[ext_resource type="VideoStream" uid="uid://c557t4h7nbl08" path="res://Assets/Ending.ogv" id="1_sbbak"]
+[ext_resource type="Script" uid="uid://ediuh43wu4qi" path="res://Scripts/ending.gd" id="2_j7kmc"]
+
+[node name="Ending" type="Node2D"]
+script = ExtResource("2_j7kmc")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -2.0
+offset_top = 14.0
+offset_right = 958.0
+offset_bottom = 554.0
+scale = Vector2(1.2, 1.16)
+stream = ExtResource("1_sbbak")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+scale = Vector2(6.96, 10.56)
+color = Color(0.00820202, 0.00820202, 0.00820202, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 427.0
+offset_top = 226.0
+offset_right = 467.0
+offset_bottom = 266.0
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "“Some doors are never meant to open.”"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "“Some guests were never meant to leave.”"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="CanvasLayer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "“And some places…”"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="CanvasLayer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "“…never really vanish.”"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="CanvasLayer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "The Nightveil Hotel is still waiting."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

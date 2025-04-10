@@ -1,0 +1,5 @@
+[signal arg="cantmove"]
+[signal arg="StartGhost5"]
+You see remains of someone in front you. Maybe someone else tried to escape as well?
+[signal arg="canmove"]
+set {ghost5} = "true"

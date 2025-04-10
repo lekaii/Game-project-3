@@ -1,0 +1,10 @@
+if {ghost5} == "true":
+	[signal arg="KillGhost5"]
+	set {ghost5} = "false"
+	set {ghost5dead} = "true"
+	You wake up, back in the beginning of the maze...
+if {} == "true":
+	[signal arg="KillGhost6"]
+	set {ghost6} = "false"
+	set {ghost6dead} = "true"
+	You wake up, back in the beginning of the maze...W

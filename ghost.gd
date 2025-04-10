@@ -55,6 +55,16 @@ func _on_dialogic_signal(argument:String):
 		can_move = true
 	elif argument == "KillGhost4" and ghostgroup == 4:
 		queue_free()
+	elif argument == "StartGhost5" and ghostgroup == 5:
+		$".".visible = true
+		can_move = true
+	elif argument == "KillGhost5" and ghostgroup == 5:
+		queue_free()
+	elif argument == "StartGhost6" and ghostgroup == 6:
+		$".".visible = true
+		can_move = true
+	elif argument == "KillGhost6" and ghostgroup == 6:
+		queue_free()
 		#$".".visible = false
 		#can_move = false
 		#global_position = get_node("/root/Hotel/GhostSpawn").global_position
@@ -69,6 +79,9 @@ func _on_killzone_body_entered(body: Node3D) -> void:
 		elif body.is_in_group("Player") && str(Dialogic.VAR.intermissiondone).to_lower() == "true":
 			body.global_position = get_node("/root/Hotel/Checkpoint_Safe").global_position
 			Dialogic.start("Death")
+	elif body.is_in_group("Player") && str(Dialogic.VAR.maze).to_lower() == "true":
+		body.global_position = get_node("/root/Maze/Checkpoint_Maze").global_position
+		Dialogic.start("Death_maze")
 
 #func killPlayer():
 	#get_tree().change_scene_to_file("res://Scenes/Hotel.tscn")

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Stone Archway
+* source:	https://sketchfab.com/3d-models/stone-archway-f4d972351c75489e9d8f268072d96bca
+* author:	TheGalaxyDev (https://sketchfab.com/thegalaxydev)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Stone Archway" (https://sketchfab.com/3d-models/stone-archway-f4d972351c75489e9d8f268072d96bca) by TheGalaxyDev (https://sketchfab.com/thegalaxydev) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

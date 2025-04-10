@@ -21,3 +21,11 @@ func _on_dialogic_signal(argument:String):
 		play()
 	if argument == "KillGhost4" && ghost_group == 4:
 		stop()
+	if argument == "StartGhost5" && ghost_group == 5:
+		play()
+	if argument == "KillGhost5" && ghost_group == 5:
+		stop()
+	if argument == "StartGhost6" && ghost_group == 6:
+		play()
+	if argument == "KillGhost6" && ghost_group == 6:
+		stop()

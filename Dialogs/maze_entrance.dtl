@@ -1,0 +1,7 @@
+[signal arg="cantmove"]
+You find yourself in a massive underground hedge maze.
+Thick mist rolls through the air. The hedges stretch endlessly around you. Everything is silent. Too silent.
+Then—footsteps. Not yours.
+A whisper drifts through the maze. (”No one leaves...”)
+set {maze} = "true"
+[signal arg="canmove"]
