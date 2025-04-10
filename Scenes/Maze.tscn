@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cud4621nf0kew"]
+[gd_scene load_steps=17 format=3 uid="uid://cud4621nf0kew"]
 
 [ext_resource type="Script" uid="uid://cehp5g2e2om7r" path="res://Scripts/dialogue_manager_maze.gd" id="1_g4w1m"]
 [ext_resource type="MeshLibrary" uid="uid://ceihtcnj8dqo5" path="res://Assets/outside_floorgridmap.tres" id="1_hdl3g"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://b8ms2v48u57ri" path="res://Assets/human_skeleton/scene.gltf" id="4_7hfkg"]
 [ext_resource type="PackedScene" uid="uid://ev4ax23iios7" path="res://Assets/GLTF format/lampWall.glb" id="5_5lbnq"]
 [ext_resource type="PackedScene" uid="uid://cqmotffl10sit" path="res://Assets/stone_archway/scene.gltf" id="9_14cn6"]
+[ext_resource type="PackedScene" uid="uid://dhq8tilsfpu5p" path="res://Assets/arrow/scene.gltf" id="10_6ccfi"]
+[ext_resource type="Script" uid="uid://c7h2eb5xq46ku" path="res://Scripts/arrow.gd" id="11_ohbi6"]
 
 [sub_resource type="Environment" id="Environment_5lbnq"]
 ambient_light_source = 3
@@ -181,6 +183,16 @@ transform = Transform3D(0.371759, 0, 0.147633, 0, 0.4, 0, -0.147633, 0, 0.371759
 transform = Transform3D(-1.71615, 1.64957, 0.764044, 1.05325, 0.0458069, 2.26684, 1.48172, 1.87799, -0.726405, 1.32404, 7.86447, -6.55363)
 light_energy = 16.0
 light_indirect_energy = 2.455
+
+[node name="arrow" parent="." instance=ExtResource("10_6ccfi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0982, -1.73819, -2.07225)
+visible = false
+script = ExtResource("11_ohbi6")
+
+[node name="arrow2" parent="." instance=ExtResource("10_6ccfi")]
+transform = Transform3D(0.00209434, 0, -0.999998, 0, 1, 0, 0.999998, 0, 0.00209434, -2.39533, -1.93371, -7.80646)
+visible = false
+script = ExtResource("11_ohbi6")
 
 [connection signal="body_entered" from="DialogueManager_maze/Aree_entrance" to="DialogueManager_maze" method="_on_aree_entrance_body_entered"]
 [connection signal="body_entered" from="DialogueManager_maze/Area_ghost5" to="DialogueManager_maze" method="_on_area_ghost_5_body_entered"]
