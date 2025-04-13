@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4mheb7veolmm"]
+[gd_scene load_steps=8 format=3 uid="uid://b4mheb7veolmm"]
 
 [ext_resource type="Texture2D" uid="uid://m448htoeiasi" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://v0eh3b2hgwoo" path="res://Player.gd" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://s07j2k8lfkbn" path="res://Player1.glb" id="3_hqtel"]
 [ext_resource type="PackedScene" uid="uid://k0fb4d0e6lps" path="res://Free 3D Modular Game Assets For Prototyping/Character/Character.fbx" id="3_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://bjj1u32y8pfla" path="res://playeranimation.tscn" id="5_2hs0m"]
+[ext_resource type="AudioStream" uid="uid://diboxs5r0l2ge" path="res://Audio/Gameproject-deathsound.wav" id="6_2hs0m"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sweqy"]
 
@@ -89,3 +90,6 @@ light_energy = 0.25
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.69625, 0)
 current = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_2hs0m")

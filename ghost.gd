@@ -74,19 +74,27 @@ func _on_dialogic_signal(argument:String):
 func _on_killzone_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player") && str(Dialogic.VAR.maze).to_lower() == "false":
 		if body.is_in_group("Player") && str(Dialogic.VAR.intermissiondone).to_lower() == "false":
+			if !Globals.player_is_dead:
+				body.deathSound()
 			Globals.player_is_dead = true
 			Globals.player_can_move = false
+		
 			$Timer.start()
 			
 			#killPlayer()
 		elif body.is_in_group("Player") && str(Dialogic.VAR.intermissiondone).to_lower() == "true":
+			if !Globals.player_is_dead:
+				body.deathSound()
 			Globals.player_is_dead = true
 			Globals.player_can_move = false
 			$Timer2.start()
 	elif body.is_in_group("Player") && str(Dialogic.VAR.maze).to_lower() == "true":
 		#implement new timer3 here
-		body.global_position = get_node("/root/Maze/Checkpoint_Maze").global_position
-		Dialogic.start("Death_maze")
+		if !Globals.player_is_dead:
+			body.deathSound()
+		Globals.player_is_dead = true
+		Globals.player_can_move = false
+		$Timer3.start()
 
 #func killPlayer():
 	#get_tree().change_scene_to_file("res://Scenes/Hotel.tscn")
@@ -98,21 +106,33 @@ func _on_timer_timeout() -> void:
 	Globals.player_is_dead = false
 	Globals.player_can_move = true
 	var player = get_node("/root/Hotel/Player")  # Adjust path to your player node
-	
 	var checkpoint = get_node("/root/Hotel/Checkpoint")
+	
+	if player and checkpoint:
+		player.global_position = checkpoint.global_position
+		
+	
+	Dialogic.start("Death")
+
+
+func _on_timer_2_timeout() -> void:
+	
+	Globals.player_is_dead = false
+	Globals.player_can_move = true
+	var player = get_node("/root/Hotel/Player")  # Adjust path to your player node
+	var checkpoint = get_node("/root/Hotel/Checkpoint_Safe")
 	
 	if player and checkpoint:
 		player.global_position = checkpoint.global_position
 	
 	Dialogic.start("Death")
 
-
-func _on_timer_2_timeout() -> void:
+func _on_timer_3_timeout() -> void:
+	
 	Globals.player_is_dead = false
 	Globals.player_can_move = true
-	var player = get_node("/root/Hotel/Player")  # Adjust path to your player node
-	
-	var checkpoint = get_node("/root/Hotel/Checkpoint_Safe")
+	var player = get_node("/root/Maze/Player")  # Adjust path to your player node
+	var checkpoint = get_node("/root/Maze/Checkpoint_Maze")
 	
 	if player and checkpoint:
 		player.global_position = checkpoint.global_position

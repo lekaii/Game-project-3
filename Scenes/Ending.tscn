@@ -2,7 +2,7 @@
 
 [ext_resource type="VideoStream" uid="uid://c557t4h7nbl08" path="res://Assets/Ending.ogv" id="1_sbbak"]
 [ext_resource type="Script" uid="uid://ediuh43wu4qi" path="res://Scripts/ending.gd" id="2_j7kmc"]
-[ext_resource type="AudioStream" uid="uid://pjcptj6bq77f" path="res://Audio/ES_House of Horror - Experia.wav" id="3_gfgbn"]
+[ext_resource type="AudioStream" uid="uid://du0b0hf5pk3s5" path="res://Audio/Gameproject_ending-music.wav" id="3_gfgbn"]
 
 [node name="Ending" type="Node2D"]
 script = ExtResource("2_j7kmc")

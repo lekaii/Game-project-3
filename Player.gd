@@ -10,6 +10,7 @@ var rayEnd = Vector3()
 var WASDdirection = 0
 
 @onready var flashlight = $RotatingPart/SpotLight3D
+@onready var audio = $AudioStreamPlayer3D
 @export var start_flashlight: bool = true  #
 var can_move: bool = true
 
@@ -17,6 +18,10 @@ var can_move: bool = true
 func _ready():
 	flashlight.visible = start_flashlight	
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+# plays the deathsound
+func deathSound():
+	audio.play()
 
 func _on_dialogic_signal(argument:String):
 	#setting player movement to stop during cutscenes
