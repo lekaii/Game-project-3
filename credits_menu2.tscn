@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvncoqikt3wfe"]
+
+[ext_resource type="Script" uid="uid://pn4anc8o80yv" path="res://credits_menu.gd" id="1_aiyna"]
+[ext_resource type="Texture2D" uid="uid://otvjlh8omnpx" path="res://Assets/CreditsBG.png" id="2_p2dmg"]
+[ext_resource type="AudioStream" uid="uid://b2kx1qn1d8vmt" path="res://Audio/Gameproject-mainmenu-ambient.wav" id="3_yc60b"]
+
+[node name="CreditsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aiyna")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -4.0
+offset_right = 5798.0
+offset_bottom = 3271.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_p2dmg")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 587.0
+offset_right = 675.0
+offset_bottom = 618.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+offset_left = 70.0
+offset_top = 21.0
+offset_right = 1132.0
+offset_bottom = 573.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "\"Stone Archway\" (https://sketchfab.com/3d-models/stone-archway-f4d972351c75489e9d8f268072d96bca) by TheGalaxyDev(https://sketchfab.com/thegalaxydev),
+ licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+
+\"Arrow\"(https://sketchfab.com/3d-models/arrow-263ad4c05921489bafde2d3342eadae9) by PropShop™(https://sketchfab.com/syedabbas0815),
+ licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+
+\"Human Skeleton\"(https://sketchfab.com/3d-models/human-skeleton-911b9df7e7834175b69b4840ea15e054) by Terrie Simmons-Ehrhardt(https://sketchfab.com/terrielsimmons),
+ licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+
+\"Folded Newspaper\"(https://sketchfab.com/3d-models/folded-newspaper-8f2a04cbcf3741088978399924b46a92) by Valo Niskanen(https://sketchfab.com/Valo.Niskanen),
+ licensed under CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/)
+
+\"Beautiful Painting\"(https://sketchfab.com/3d-models/beautiful-painting-9275724f094c4af1bae0b09d92b8f56b) by Jungle Jim(https://sketchfab.com/jungle_jim),
+ licensed under CC BY 4.0 (modified from original) (https://creativecommons.org/licenses/by/4.0/)
+
+\"Retro Modular Hedge Maze\"(https://elegantcrow.itch.io/retro-modular-hedge-maze) assets by Elegant Crow(https://elegantcrow.itch.io/),
+ licensed under CC 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)"
+fit_content = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_yc60b")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

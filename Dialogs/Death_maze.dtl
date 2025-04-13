@@ -7,4 +7,4 @@ if {ghost6} == "true":
 	[signal arg="KillGhost6"]
 	set {ghost6} = "false"
 	set {ghost6dead} = "true"
-	You wake up, back in the beginning of the maze...W
+	You wake up, back in the beginning of the maze...

@@ -3,7 +3,7 @@
 [signal arg="safe_south"]
 As you step out into the hallway, door slams shut behind you!
 [sound path="res://Audio/Gameproject-new-screamer.wav" volume="0.0"]
-[wait time="7.0"]
+[wait time="8.5"]
 [signal arg="hotel_lights"]
 Suddenly, something lunges at you!
 [signal arg="ghostinvisible"]

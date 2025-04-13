@@ -137,4 +137,4 @@ func _on_timer_3_timeout() -> void:
 	if player and checkpoint:
 		player.global_position = checkpoint.global_position
 	
-	Dialogic.start("Death")
+	Dialogic.start("Death_maze")
