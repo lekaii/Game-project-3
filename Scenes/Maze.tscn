@@ -97,28 +97,34 @@ transform = Transform3D(-0.22051, 0, -0.975385, 0, 1, 0, 0.975385, 0, -0.22051, 
 [node name="Ghost" parent="." instance=ExtResource("2_7yhxv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.9604, -0.932249, 4.80718)
 visible = false
+locked_y_position = -1.25
 ghostgroup = 5
 
 [node name="Ghost2" parent="." instance=ExtResource("2_7yhxv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.0161, -0.966163, 5.77803)
 visible = false
+locked_y_position = -1.25
 ghostgroup = 5
 
 [node name="Ghost3" parent="." instance=ExtResource("2_7yhxv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.4561, -0.839877, 4.55417)
 visible = false
+locked_y_position = -1.25
 ghostgroup = 5
 
 [node name="Ghost4" parent="." instance=ExtResource("2_7yhxv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1061, -1.26134, -15.0711)
+locked_y_position = -1.25
 ghostgroup = 6
 
 [node name="Ghost5" parent="." instance=ExtResource("2_7yhxv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0724, -1.1996, -16.4147)
+locked_y_position = -1.25
 ghostgroup = 6
 
 [node name="Ghost6" parent="." instance=ExtResource("2_7yhxv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.9124, -0.86664, -15.983)
+locked_y_position = -1.25
 ghostgroup = 6
 
 [node name="lampWall" parent="." instance=ExtResource("5_5lbnq")]
